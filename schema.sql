@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS pokemons;
 
 CREATE TABLE pokemons (
   pokemon_id SERIAL PRIMARY KEY,
-  name VARCHAR(255),
+  name VARCHAR(255) UNIQUE,
   description TEXT,
   level VARCHAR(255),
   hp VARCHAR(255),
