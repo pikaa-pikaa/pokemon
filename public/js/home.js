@@ -1,5 +1,22 @@
 $(function () {
+	//navbar
+
+	$('.navBarsClose').on('click', function () {
+		$('.navBarsOpen').removeClass('hide');
+		$('.nav').removeClass('hide');
+		$('.navBarsClose').addClass('hide');
+	});
+
+	$('.navBarsOpen').on('click', function () {
+		$('.navBarsOpen').addClass('hide');
+		$('.nav').addClass('hide');
+		$('.navBarsClose').removeClass('hide');
+	});
+
+	//end navbar
+
 	//card slider
+
 	$('.right').on('click', function () {
 		let currentCard = $('.active');
 		let nextCard = currentCard.next();
@@ -20,19 +37,4 @@ $(function () {
 	});
 
 	//end of card slider
-
-	//navbar
-	$('.navBarsClose').on('click', function () {
-		$('.navBarsOpen').removeClass('hide');
-		$('.nav').removeClass('hide');
-		$('.navBarsClose').addClass('hide');
-	});
-
-	$('.navBarsOpen').on('click', function () {
-		$('.navBarsOpen').addClass('hide');
-		$('.nav').addClass('hide');
-		$('.navBarsClose').removeClass('hide');
-	});
-
-	//end navbar
 });
