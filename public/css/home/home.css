@@ -1,0 +1,150 @@
+/* global style*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--mainTransition: all 0.3s ease-in-out;
+	--mainFont: 'DotGothic16', sans-serif;
+	--mainColor: rgb(149, 0, 0);
+	--secondColor: rgb(0, 72, 141);
+	--thirdColor: rgb(240, 207, 0);
+	--forthColor: white;
+	--fifthColor: rgb(58, 85, 156);
+	--darkColor: black;
+}
+
+html {
+	scroll-behavior: smooth;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	display: table;
+	font-family: var(--mainFont);
+}
+
+header {
+	display: table-row;
+	width: 100%;
+}
+
+main {
+	display: table-row;
+	width: 100%;
+}
+
+footer {
+	display: table-row;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.hide {
+	display: none;
+}
+
+/* header style */
+header {
+	height: 100vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)),
+		url('http://www.baltana.com/files/wallpapers-16/4K-Pokemon-Detective-Pikachu-High-Definition-Wallpaper-39827.jpg')
+			center/cover no-repeat scroll;
+	position: relative;
+}
+
+.pokemon {
+	position: absolute;
+	top: 50%;
+	left: 25%;
+	width: 40%;
+	height: 30%;
+	transform: translate(-50%, -50%);
+}
+
+.pokemon img,
+.navBarsClose img,
+.navBarsOpen img,
+.card img {
+	width: 100%;
+	height: 100%;
+}
+
+.navBarsClose,
+.navBarsOpen {
+	position: absolute;
+	top: 10%;
+	left: 95%;
+	width: 4%;
+	height: 8%;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+}
+
+/* end of header style */
+
+/* main style */
+
+.card {
+	display: inline-block;
+	width: 10%;
+	height: 20%;
+	/* display: flex;
+	justify-content: flex-start;
+	align-items: center; */
+}
+
+/* end of main style */
+
+/* footer */
+footer {
+	height: 130px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--secondColor);
+	overflow: hidden;
+	padding: 1.5rem 0;
+	margin-top: 5rem;
+}
+
+.footer-links {
+	list-style: none;
+	width: 10%;
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 1rem;
+}
+
+.footer-links a {
+	font-size: 200%;
+	color: var(--forthColor);
+	transition: var(--mainTransition);
+}
+
+.footer-links a:hover {
+	color: var(--thirdColor);
+}
+
+footer h2 {
+	font-size: 110%;
+	text-transform: capitalize;
+	letter-spacing: 0.2rem;
+	color: var(--forthColor);
+}
+
+/* end of footer */
