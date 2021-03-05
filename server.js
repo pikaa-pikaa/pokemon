@@ -27,6 +27,22 @@ const client = new pg.Client(process.env.DATABASE_URL);
 // 	ssl: { rejectUnauthorized: false },
 // });
 
+//constructor
+function Pokemon(data) {
+	this.name = data;
+	this.description = data;
+	this.level = data;
+	this.hp = data;
+	this.type = data;
+	this.abilities = data;
+	this.image = data;
+	this.attack = data;
+	this.defence = data;
+	this.weaknesses = data;
+	this.evolvesFrom = data;
+	this.evolvesTo = data;
+}
+
 // listen
 const PORT = process.env.PORT || 3000;
 
