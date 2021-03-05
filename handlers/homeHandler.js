@@ -50,17 +50,15 @@ const homeHandler = (req, res) => {
 
 			client
 				.query(sql, safeValues)
-				.then((results) => {
-					// console.log(results.rows);
-				})
+				.then((results) => {})
 				.catch((err) => {
 					console.log(err);
 				});
 		});
 
-		let sql2 =
-			'SELECT * FROM pokemons WHERE level IS NOT NULL ORDER BY hp DESC LIMIT 20;';
-		client.query(sql2).then((results) => {
+		let sql2 = 'SELECT * FROM pokemons WHERE hp >= $1 ORDER BY hp LIMIT 6;';
+		let value = [generateRandomHp()];
+		client.query(sql2, value).then((results) => {
 			res.render('pages/home', { pokemons: results.rows });
 		});
 	});
@@ -68,6 +66,10 @@ const homeHandler = (req, res) => {
 
 function generateRandomPage() {
 	return Math.floor(Math.random() * 42 + 1);
+}
+
+function generateRandomHp() {
+	return Math.floor(Math.random() * (200 - 50) + 50);
 }
 
 module.exports = homeHandler;
