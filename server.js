@@ -23,10 +23,11 @@ app.use(express.static('./public'));
 app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 
-//let url = `https://api.pokemontcg.io/v2/cards?page=1&pageSize=20`;
-
 //routes
 app.get('/home', homeHandler);
+app.get('/characters', (req, res) => {
+	res.redirect('/html/characters.html');
+});
 
 // listen
 const PORT = process.env.PORT || 3000;
