@@ -59,15 +59,15 @@ const homeHandler = (req, res) => {
 		});
 
 		let sql2 =
-			'SELECT * FROM pokemons  WHERE level IS NOT NULL ORDER BY hp DESC LIMIT 20;';
+			'SELECT * FROM pokemons WHERE level IS NOT NULL ORDER BY hp DESC LIMIT 20;';
 		client.query(sql2).then((results) => {
-			res.send(results.rows);
+			res.render('pages/home', { pokemons: results.rows });
 		});
 	});
 };
 
 function generateRandomPage() {
-	return Math.floor(Math.random() * 50 + 1);
+	return Math.floor(Math.random() * 42 + 1);
 }
 
 module.exports = homeHandler;
