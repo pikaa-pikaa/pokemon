@@ -5,15 +5,15 @@ CREATE TABLE pokemons (
   name VARCHAR(255) UNIQUE,
   description TEXT,
   level VARCHAR(255),
-  hp VARCHAR(255),
-  type VARCHAR(255),
-  abilities VARCHAR(255),
-  image VARCHAR(255),
-  attack VARCHAR(255),
-  defence VARCHAR(255),
-  weaknesses VARCHAR(255),
-  evolves_from VARCHAR(255),
-  evolves_to VARCHAR(255)
+  hp INT,
+  type TEXT,
+  abilities TEXT,
+  image TEXT,
+  attack TEXT,
+  defence TEXT,
+  weaknesses TEXT,
+  evolves_from TEXT,
+  evolves_to TEXT
 );
 
 
