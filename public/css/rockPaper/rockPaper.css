@@ -60,61 +60,62 @@ ul {
 }
 
 /* header style */
-.nav {
-	position: fixed;
-	top: 40%;
-	left: 110%;
-	background-color: var(--forthColor);
-	transform: translate(-50%, -50%);
-	width: 90%;
-	height: 80%;
-	padding-left: 10rem;
+
+.menu {
+	width: 85px;
+	height: 85px;
 	border-radius: 50%;
-	z-index: 2;
-	transition: var(--mainTransition);
-}
-
-.nav ul {
-	width: 100%;
-	height: 100%;
-	padding: 10rem;
-}
-
-.nav ul li {
-	font-size: 200%;
-	margin-bottom: 2rem;
-}
-
-.nav ul li a {
-	color: var(--mainColor);
-	text-decoration: none;
-	letter-spacing: 0.2rem;
-	transition: var(--mainTransition);
-}
-
-.nav ul li a:hover {
-	color: var(--fifthColor);
-}
-
-.navBarsClose img,
-.navBarsOpen img,
-.card img {
-	width: 100%;
-	height: 100%;
-	transition: var(--mainTransition);
-}
-
-.navBarsClose,
-.navBarsOpen {
 	position: fixed;
-	top: 10%;
-	left: 95%;
-	width: 4%;
-	height: 8%;
-	transform: translate(-50%, -50%);
+	margin: auto;
+	bottom: 80%;
+	right: 0;
+	top: 0;
+	left: 90%;
+	z-index: 2;
 	cursor: pointer;
-	z-index: 3;
-	transition: var(--mainTransition);
+}
+
+.menuItems {
+	height: 80px;
+	width: 80px;
+	position: fixed;
+	margin: auto;
+	bottom: 78%;
+	right: 0;
+	top: 0;
+	left: 90%;
+}
+.menuItems > div {
+	background-color: white;
+	height: 75px;
+	width: 75px;
+	border-radius: 50%;
+	position: relative;
+	font-size: 40px;
+	transition: 0.5s linear;
+}
+.fas {
+	position: relative;
+	top: 3px;
+}
+a {
+	color: red;
+}
+.item2 {
+	bottom: 80px;
+}
+.item3 {
+	bottom: 160px;
+}
+.item4 {
+	bottom: 230px;
+}
+
+.menuItems > div:hover {
+	background-color: red;
+}
+.menuItems > div:hover a {
+	color: white;
 }
 
 /* end of header style */

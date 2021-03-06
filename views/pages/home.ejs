@@ -35,24 +35,40 @@
             </div>
             <p class="hello">Hi! Mohammed</p>
 
-            <nav class="nav">
-                <div class="navBarsClose ">
-                    <img src="/images/closeBall.png" alt="Pokemon Ball">
+            <div>
+                <img class="menu navBarsClose" onclick="pop()" src="/images/closeBall.png" alt="Pokemon Ball">
+                <img class="menu navBarsOpen hide" onclick="pop()" src="/images/openBall.png" alt="Pokemon Ball">
+                <div class="menuItems">
+                    <div class="item1" id="item1">
+                        <center>
+                            <a href="/dashboard">
+                                <i class="fas fa-id-card"></i>
+                            </a>
+                        </center>
+                    </div>
+                    <div class="item2" id="item2">
+                        <center>
+                            <a href="/characters">
+                                <i class="fas fa-gamepad"></i>
+                            </a>
+                        </center>
+                    </div>
+                    <div class="item3" id="item3">
+                        <center>
+                            <a href="/html/aboutUs.html">
+                                <i class="fas fa-info"></i>
+                            </a>
+                        </center>
+                    </div>
+                    <div class="item4" id="item4">
+                        <center>
+                            <a href="/">
+                                <i class="fas fa-sign-out-alt"></i>
+                            </a>
+                        </center>
+                    </div>
                 </div>
-                <div class="navBarsOpen hide">
-                    <img src="/images/openBall.png" alt="Pokemon Ball">
-                </div>
-                <div class="navbar hide">
-                    <img src="/images/nav.png" alt="navbar">
-                </div>
-                <ul class="links hide">
-                    <li><a href="/home">Home</a></li>
-                    <li><a href="/dashboard">DashBoard</a></li>
-                    <li><a href="/characters">Competition</a></li>
-                    <li><a href="/html/aboutUs.html">About Us</a></li>
-                    <li><a href="/">Logout</a></li>
-                </ul>
-            </nav>
+            </div>
         </header>
         <main>
             <section class="info-container">

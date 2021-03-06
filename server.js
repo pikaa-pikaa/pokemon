@@ -19,7 +19,6 @@ const competitionHandler = require('./handlers/competitionHandler');
 const loginHandler = require('./handlers/loginHandler');
 const signUpHandler = require('./handlers/signUpHandler');
 
-
 //app setup
 const app = express();
 
@@ -31,12 +30,14 @@ app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 
 //routes
-app.get('/',(req,res)=>{
-	res.render('pages/login')
-})
-app.get('/signup',(req,res)=>{
-	res.render('pages/signUp')
-})
+app.get('/', (req, res) => {
+	res.render('pages/login');
+});
+
+app.get('/signup', (req, res) => {
+	res.render('pages/signUp');
+});
+
 app.post('/login', loginHandler);
 app.post('/signUp', signUpHandler);
 app.get('/home', homeHandler);
