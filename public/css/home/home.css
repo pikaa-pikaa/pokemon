@@ -279,6 +279,7 @@ header {
 	border-top-left-radius: 1rem;
 	border-bottom-left-radius: 1rem;
 	transition: var(--mainTransition);
+	z-index: 5;
 }
 
 .left:hover,

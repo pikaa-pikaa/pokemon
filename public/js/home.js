@@ -18,7 +18,7 @@ $(function () {
 
 	//hi
 
-	$('.hi').stop().delay(500).fadeTo(2000, 1 );
+	$('.hi').stop().delay(500).fadeTo(2000, 1);
 	$('.hello').stop().delay(1000).fadeTo(2000, 1);
 
 	//end hi
