@@ -47,28 +47,28 @@ Communication plan and strategy :
 ![Signup](wireframe/sginup page.png)
 
 - Login page
-![Login](wireframe/login page.png=25x25)
+![Login](wireframe/login page.png)
 
 - Homepage
-![homepage](wireframe/homepage.png=25x25)
+![homepage](wireframe/homepage.png)
 
 - Dashboard page
-![Dashboard](wireframe/dashboardpage.png=25x25)
+![Dashboard](wireframe/dashboardpage.png)
 
 - Descreiption page
-![Descreiption](wireframe/descreiptionpage.png=25x25)
+![Descreiption](wireframe/descreiptionpage.png)
 
 - AboutUs
-![aboutUs](wireframe/aboutUs.png=25x25)
+![aboutUs](wireframe/aboutUs.png)
 
 - Characters
-![characters](public/images/wireframe/characterspage.png=25x25)
+![characters](public/images/wireframe/characterspage.png)
 
 - Start game
-![Start](whoisgonnastartpage.png=25x25)
+![Start](whoisgonnastartpage.png)
 
 - Competition page
-![competition](competitionpage.png=25x25)
+![competition](competitionpage.png)
 
 - Win or Lose page
 ![winorlose](wireframe/winorlosepage.png)
