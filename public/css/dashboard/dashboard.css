@@ -54,13 +54,75 @@ ul {
 	list-style-type: none;
 }
 
-.hide {
+/* .hide {
 	display: none;
 	transition: var(--mainTransition);
-}
+} */
 
 /* header style */
-.nav {
+
+/* nav style */
+.menu{
+	width: 85px;
+	height: 85px;
+	background: brown;
+    border-radius:50% ;
+	position: absolute;
+	margin: auto;
+	bottom: 80%;
+	right: 0;
+	top: 0;
+	left: 90%;
+	z-index: 2;
+}
+
+.menuItems{
+	height: 80px;
+	width: 80px;
+	position: absolute;
+	margin: auto;
+	bottom: 78%;
+	right: 0;
+	top: 0;
+	left: 90%;
+
+}
+.menuItems>div{
+	background-color: white;
+	height: 75px;
+	width: 75px;
+	border-radius: 50% ;
+	position: relative;
+	font-size: 40px;
+	transition: 0.5s  linear;
+	
+}
+.fas{
+position: relative;
+top:3px;
+}
+a{
+	color: red;
+}
+.item2{
+	bottom: 80px;
+}
+.item3{
+	bottom: 160px;
+}
+.item4{
+	bottom: 230px;
+}
+
+.menuItems>div:hover{
+	background-color: red;
+}
+.menuItems>div:hover a{
+	color: white;
+}
+/* end of nav  */
+
+/* .nav {
 	position: fixed;
 	top: 40%;
 	left: 110%;
@@ -118,7 +180,7 @@ ul {
 	cursor: pointer;
 	z-index: 3;
 	transition: var(--mainTransition);
-}
+} */
 
 /* end of header style */
 
@@ -139,22 +201,24 @@ main {
 	flex-wrap: wrap;
 	position: relative; 
 	transition: var(--mainTransition);
-	margin-top: 10rem;
+	margin-top: 12rem;
 
 }
 
 
 .card {
 	flex: 0 0 calc(27% - 4rem);
-	width: 10%;
+	width: 60%;
 	height: 60%;
-	border-radius: 1rem;
+	border-radius: 1rem ;
 	transition: var(--mainTransition);
 	margin: 0.5rem;
+
+	
 }
 
 .card a img {
-	width: 100%;
+	width: 80%;
 	height: 100%;
 }
 
