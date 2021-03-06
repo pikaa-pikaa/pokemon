@@ -65,10 +65,10 @@ Communication plan and strategy :
 ![characters](wireframe/characterspage.png)
 
 - Start game
-![Start](whoisgonnastartpage.png)
+![Start](wireframe/whoisgonnastartpage.png)
 
 - Competition page
-![competition](competitionpage.png)
+![competition](wireframe/competitionpage.png)
 
 - Win or Lose page
 ![winorlose](wireframe/winorlosepage.png)
