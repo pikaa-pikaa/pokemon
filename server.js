@@ -31,6 +31,12 @@ app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 
 //routes
+app.get('/',(req,res)=>{
+	res.render('pages/login')
+})
+
+app.post('/login', loginHandler);
+app.post('/signup', signUpHandler);
 app.get('/home', homeHandler);
 app.get('/dashboard', dashboardHandler);
 app.get('/description/:pokemonId', descriptionHandler);
