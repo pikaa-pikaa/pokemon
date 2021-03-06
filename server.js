@@ -13,6 +13,8 @@ const client = require('./data/database');
 //handlers
 const homeHandler = require('./handlers/homeHandler');
 const dashboardHandler = require('./handlers/dashboardHandler');
+const charactersHandler = require('./handlers/charactersHandler');
+const rockPaperHandler = require('./handlers/rockPaperHandler');
 
 //app setup
 const app = express();
@@ -26,9 +28,8 @@ app.set('view engine', 'ejs');
 
 //routes
 app.get('/home', homeHandler);
-app.get('/characters', (req, res) => {
-	res.render('pages/characters');
-});
+app.get('/characters', charactersHandler);
+app.get('/rockPaperSissiors', rockPaperHandler);
 app.get('/dashboard', dashboardHandler);
 
 // listen
