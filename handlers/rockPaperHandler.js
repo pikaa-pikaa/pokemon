@@ -18,18 +18,30 @@ const rockPaperHandler = (req, res) => {
 	);
 
 	let randomTrainer = generateRandomTrainer();
+
+	while (randomTrainer === parseInt(trainer)) {
+		randomTrainer = generateRandomTrainer();
+	}
+
 	let randomChoosenTrainer = characters.find(
 		(character) => character.id === randomTrainer,
 	);
 
+	let first = generateRandomTurn();
+
 	res.render('pages/rockPaperSissiors', {
-		choosenTrainer: choosenTrainer,
-		randomChoosenTrainer: randomChoosenTrainer,
+		choosenTrainer: { turn: 1, choosenTrainer },
+		randomChoosenTrainer: { turn: 2, randomChoosenTrainer },
+		first: first,
 	});
 };
 
 function generateRandomTrainer() {
 	return Math.floor(Math.random() * 10 + 1);
+}
+
+function generateRandomTurn() {
+	return Math.floor(Math.random() * 2 + 1);
 }
 
 module.exports = rockPaperHandler;

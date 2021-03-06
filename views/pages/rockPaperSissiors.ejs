@@ -48,19 +48,29 @@
             <h1>Who is gonna start first?</h1>
             <div class="characters">
                 <div class="character user">
-                    <img src="/images/characters/<%=choosenTrainer.id %>.png" alt="<%=choosenTrainer.name %>">
+                    <img src="/images/characters/<%=choosenTrainer.choosenTrainer.id %>.png"
+                        alt="<%=choosenTrainer.choosenTrainer.name %>">
                     <p>
-                        <%=choosenTrainer.name %>
+                        <%=choosenTrainer.choosenTrainer.name %>
                     </p>
                 </div>
                 <div class="random">
-                    <img src="/images/characters/1.png" alt="Brock">
+                    <img src="/images/first.png" alt="first begin">
+
+                    <p class="start">
+                        <% if (choosenTrainer.turn===first) { %>
+                            <%=choosenTrainer.choosenTrainer.name %> begin the first round
+                                <% } else { %>
+                                    <%=randomChoosenTrainer.randomChoosenTrainer.name %> begin the first round
+                                        <% } %>
+                    </p>
+                    <a href="/competition" class="fight">Start your Fight</a>
                 </div>
                 <div class="character computer">
-                    <img src="/images/characters/<%=randomChoosenTrainer.id %>.png"
-                        alt="<%=randomChoosenTrainer.name %>">
+                    <img src="/images/characters/<%=randomChoosenTrainer.randomChoosenTrainer.id %>.png"
+                        alt="<%=randomChoosenTrainer.randomChoosenTrainer.name %>">
                     <p>
-                        <%=randomChoosenTrainer.name %>
+                        <%=randomChoosenTrainer.randomChoosenTrainer.name %>
                     </p>
                 </div>
             </div>
@@ -73,7 +83,7 @@
             <script src=" https://code.jquery.com/jquery-3.5.1.js"></script>
 
             <!-- js -->
-            <script src="js/rockPaper.js"></script>
+            <script src="/js/rockPaper.js"></script>
     </body>
 
 </html>
