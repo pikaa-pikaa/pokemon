@@ -63,32 +63,43 @@ ul {
 header {
 	height: 100vh;
 	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
-		url('./../../images/banner.jpg') center/cover no-repeat fixed;
+		url('./../../images/banner.jpg') center/cover no-repeat scroll;
 	position: relative;
 }
 
 .nav {
 	position: fixed;
 	top: 40%;
-	left: 110%;
-	background-color: var(--forthColor);
-	transform: translate(-50%, -50%);
-	width: 90%;
-	height: 80%;
-	padding-left: 10rem;
-	border-radius: 50%;
-	z-index: 2;
+	left: 50%;
+	width: 50%;
+	height: 50%;
 	transition: var(--mainTransition);
+	z-index: 3;
 }
 
-.nav ul {
+.navbar {
+	position: fixed;
+	top: 10%;
+	left: 68%;
+	width: 30%;
+	height: 40rem;
+}
+
+.navbar img {
 	width: 100%;
 	height: 100%;
-	padding: 10rem;
+}
+
+.links {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 32%;
+	left: 78%;
 }
 
 .nav ul li {
-	font-size: 200%;
+	font-size: 150%;
 	margin-bottom: 2rem;
 }
 
@@ -100,7 +111,7 @@ header {
 }
 
 .nav ul li a:hover {
-	color: var(--fifthColor);
+	color: var(--secondColor);
 }
 
 .pokemon {
@@ -112,10 +123,32 @@ header {
 	transform: translate(-50%, -50%);
 }
 
+.hi {
+	position: absolute;
+	top: 30%;
+	left: 70%;
+	width: 15%;
+	height: 15%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+}
+
+.hello {
+	position: absolute;
+	top: 31%;
+	left: 70%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	font-size: 150%;
+	text-align: center;
+	opacity: 0;
+}
+
 .pokemon img,
 .navBarsClose img,
 .navBarsOpen img,
-.card img {
+.card img,
+.hi img {
 	width: 100%;
 	height: 100%;
 	transition: var(--mainTransition);
@@ -130,7 +163,7 @@ header {
 	height: 8%;
 	transform: translate(-50%, -50%);
 	cursor: pointer;
-	z-index: 3;
+	z-index: 5;
 	transition: var(--mainTransition);
 }
 
