@@ -1,92 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pokémon</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon</title>
 
-        <!-- favicon -->
-        <link rel="shortcut icon" href="https://www.pngkey.com/png/detail/317-3178288_pokemon-go-icon-png.png"
-            type="image/x-icon">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="https://www.pngkey.com/png/detail/317-3178288_pokemon-go-icon-png.png"
+        type="image/x-icon">
 
-        <!-- font awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-            integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-            crossorigin="anonymous" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
 
-        <!-- google font -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
 
-        <!-- style -->
-        <link rel="stylesheet" href="/css/home/home.css">
+    <!-- style -->
+    <link rel="stylesheet" href="/css/home/home.css">
 
-    </head>
+</head>
 
-    <body>
-        <header class="banner">
-            <div class="pokemon">
-                <img src="/images/pokemonTitle.png" alt="Pokemon">
-            </div>
-            <div class="navBarsClose ">
-                <img src="/images/closeBall.png" alt="Pokemon Ball">
-            </div>
-            <div class="navBarsOpen hide">
-                <img src="/images/openBall.png" alt="Pokemon Ball">
-            </div>
-            <nav class="nav hide">
-                <ul>
-                    <li><a href="/home">Home</a></li>
-                    <li><a href="/dashboard">DashBoard</a></li>
-                    <li><a href="/characters">Competition</a></li>
-                    <li><a href="/html/aboutUs.html">About Us</a></li>
-                    <li><a href="/">Logout</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section class="info-container">
-                <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi est praesentium
-                    aliquid rerum
-                    culpa soluta nobis cupiditate eius, beatae, eum dicta quam tempora quis ad ipsa. Quisquam molestiae
-                    iste corporis?</p>
-            </section>
-            <section class="cards">
-                <h2 class="cards-title">Featured Pokémon</h2>
-                <i class="fas fa-chevron-left left"></i>
-                <div class="slider">
-                    <% pokemons.forEach((pokemon,index)=> { %>
-                        <% if(index===2) {%>
-                            <div class="card active" id=<%=index %> >
-                                <a href="/description"><img src=<%=pokemon.image %> alt="pokemon" class='img'></a>
+<body>
+    <header class="banner">
+        <div class="pokemon">
+            <img src="/images/pokemonTitle.png" alt="Pokemon">
+        </div>
+        <div class="navBarsClose ">
+            <img src="/images/closeBall.png" alt="Pokemon Ball">
+        </div>
+        <div class="navBarsOpen hide">
+            <img src="/images/openBall.png" alt="Pokemon Ball">
+        </div>
+        <nav class="nav hide">
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/dashboard">DashBoard</a></li>
+                <li><a href="/characters">Competition</a></li>
+                <li><a href="/html/aboutUs.html">About Us</a></li>
+                <li><a href="/">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="info-container">
+            <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi est praesentium
+                aliquid rerum
+                culpa soluta nobis cupiditate eius, beatae, eum dicta quam tempora quis ad ipsa. Quisquam molestiae
+                iste corporis?</p>
+        </section>
+        <section class="cards">
+            <h2 class="cards-title">Featured Pokémon</h2>
+            <i class="fas fa-chevron-left left"></i>
+            <div class="slider">
+                <% pokemons.forEach((pokemon,index)=> { %>
+                    <% if(index===2) {%>
+                        <div class="card active" id=<%=index %> >
+                            <a href="/description"><img src=<%=pokemon.image %> alt="pokemon" class='img'></a>
+                        </div>
+                        <% } else { %>
+                            <div class="card hold" id=<%=index %> >
+                                <a href="/description"> <img src=<%=pokemon.image %> alt="pokemon"
+                                    class='img'></a>
                             </div>
-                            <% } else { %>
-                                <div class="card hold" id=<%=index %> >
-                                    <a href="/description"> <img src=<%=pokemon.image %> alt="pokemon"
-                                        class='img'></a>
-                                </div>
-                                <% } %>
-                                    <% }); %>
-                </div>
-                <i class="fas fa-chevron-right right"></i>
-            </section>
-            <section class="competition">
-                <a href="/characters" class="start">Start Your Competition</a>
-            </section>
-        </main>
+                            <% } %>
+                                <% }); %>
+            </div>
+            <i class="fas fa-chevron-right right"></i>
+        </section>
+        <section class="competition">
+            <a href="/characters" class="start">Start Your Competition</a>
+        </section>
+    </main>
 
-        <%- include('./../layout/footer') %>
+    <%- include('./../layout/footer') %>
 
 
 
 
-            <!-- jQuery -->
-            <script src=" https://code.jquery.com/jquery-3.5.1.js"></script>
+        <!-- jQuery -->
+        <script src=" https://code.jquery.com/jquery-3.5.1.js"></script>
 
-            <!-- js -->
-            <script src="js/home.js"></script>
-    </body>
+        <!-- js -->
+        <script src="js/home.js"></script>
+</body>
 
 </html>
