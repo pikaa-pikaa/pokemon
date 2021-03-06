@@ -34,9 +34,11 @@ app.set('view engine', 'ejs');
 app.get('/',(req,res)=>{
 	res.render('pages/login')
 })
-
+app.get('/signup',(req,res)=>{
+	res.render('pages/signUp')
+})
 app.post('/login', loginHandler);
-app.post('/signup', signUpHandler);
+app.post('/signUp', signUpHandler);
 app.get('/home', homeHandler);
 app.get('/dashboard', dashboardHandler);
 app.get('/description/:pokemonId', descriptionHandler);
