@@ -12,6 +12,7 @@ const client = require('./data/database');
 
 //handlers
 const homeHandler = require('./handlers/homeHandler');
+const dashboardHandler = require('./handlers/dashboardHandler');
 
 //app setup
 const app = express();
@@ -28,6 +29,7 @@ app.get('/home', homeHandler);
 app.get('/characters', (req, res) => {
 	res.redirect('/html/characters.html');
 });
+app.get('/dashboard', dashboardHandler);
 
 // listen
 const PORT = process.env.PORT || 3000;
