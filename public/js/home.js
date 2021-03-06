@@ -1,19 +1,27 @@
 $(function () {
 	//navbar
-
 	$('.navBarsClose').on('click', function () {
-		$('.navBarsOpen').removeClass('hide');
-		$('.nav').removeClass('hide');
-		$('.navBarsClose').addClass('hide');
+		$('.navBarsClose').stop().hide();
+		$('.navBarsOpen').stop().fadeIn();
+		$('.navbar').stop().delay(1000).show();
+		$('.links').stop().delay(2000).show();
 	});
 
 	$('.navBarsOpen').on('click', function () {
-		$('.navBarsOpen').addClass('hide');
-		$('.nav').addClass('hide');
-		$('.navBarsClose').removeClass('hide');
+		$('.navBarsOpen').stop().hide();
+		$('.navbar').stop().hide();
+		$('.links').stop().hide();
+		$('.navBarsClose').stop().delay(500).show();
 	});
 
 	//end navbar
+
+	//hi
+
+	$('.hi').stop().delay(500).fadeTo(2000, 1 );
+	$('.hello').stop().delay(1000).fadeTo(2000, 1);
+
+	//end hi
 
 	//card slider
 
