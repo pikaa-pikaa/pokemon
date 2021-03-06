@@ -34,3 +34,5 @@ CREATE TABLE pokemons_users (
   user_id INT REFERENCES users (user_id),
   PRIMARY KEY (pokemon_id, user_id)
 );
+
+INSERT INTO users (username,password) VALUES ('aya','12345');
