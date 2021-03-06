@@ -160,7 +160,7 @@ h1 {
 
 .character img {
 	width: 10rem;
-	height: 17rem;
+	height: 18rem;
 }
 
 .character p {
@@ -174,8 +174,8 @@ h1 {
 }
 
 .random {
-	width: 20%;
-	height: 25rem;
+	width: 22%;
+	height: 30rem;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
@@ -185,8 +185,37 @@ h1 {
 }
 
 .random img {
-	width: 10rem;
+	width: 17rem;
 	height: 17rem;
+}
+
+.start {
+	margin-top: 2rem;
+	letter-spacing: 0.1rem;
+	font-size: 110%;
+	background-color: var(--fifthColor);
+	color: var(--forthColor);
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	text-align: center;
+}
+
+.fight {
+	margin-top: 2rem;
+	letter-spacing: 0.1rem;
+	font-size: 130%;
+	background-color: var(--mainColor);
+	color: var(--forthColor);
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	transition: var(--mainTransition);
+}
+
+.fight:hover {
+	background-color: var(--darkColor);
+	color: var(--thirdColor);
+	transform: scale(1.2);
+	cursor: pointer;
 }
 
 /* end of main style */
