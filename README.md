@@ -40,3 +40,17 @@ Communication plan and strategy :
 
 ********************************
 
+# Wireframes 
+
+![](public/images/wireframe/sginup page.png =25x25)
+![](public/images/wireframe/login page.png =25x25)
+![](public/images/wireframe/homepage.png =25x25)
+![](public/images/wireframe/dashboardpage.png =25x25)
+![](public/images/wireframe/descreiptionpage.png =25x25)
+![](public/images/wireframe/aboutUs.png =25x25)
+![](public/images/wireframe/characterspage.png =25x25)
+![](public/images/wireframe/whoisgonnastartpage.png =25x25)
+![](public/images/wireframe/competitionpage.png =25x25)
+![](public/images/wireframe/winorlosepage.png =25x25)
+
+
