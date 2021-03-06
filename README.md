@@ -42,15 +42,35 @@ Communication plan and strategy :
 
 # Wireframes 
 
-![](public/images/wireframe/sginup page.png =25x25)
-![](public/images/wireframe/login page.png =25x25)
-![](public/images/wireframe/homepage.png =25x25)
-![](public/images/wireframe/dashboardpage.png =25x25)
-![](public/images/wireframe/descreiptionpage.png =25x25)
-![](public/images/wireframe/aboutUs.png =25x25)
-![](public/images/wireframe/characterspage.png =25x25)
-![](public/images/wireframe/whoisgonnastartpage.png =25x25)
-![](public/images/wireframe/competitionpage.png =25x25)
-![](public/images/wireframe/winorlosepage.png =25x25)
+- Signup page
+
+![Signup](wireframe/sginup page.png)
+
+- Login page
+![Login](wireframe/login page.png=25x25)
+
+- Homepage
+![homepage](wireframe/homepage.png=25x25)
+
+- Dashboard page
+![Dashboard](wireframe/dashboardpage.png=25x25)
+
+- Descreiption page
+![Descreiption](wireframe/descreiptionpage.png=25x25)
+
+- AboutUs
+![aboutUs](wireframe/aboutUs.png=25x25)
+
+- Characters
+![characters](public/images/wireframe/characterspage.png=25x25)
+
+- Start game
+![Start](whoisgonnastartpage.png=25x25)
+
+- Competition page
+![competition](competitionpage.png=25x25)
+
+- Win or Lose page
+![winorlose](wireframe/winorlosepage.png)
 
 
