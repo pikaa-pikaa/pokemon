@@ -25,57 +25,60 @@
 
 </head>
 
-<body>
-    <header class="banner">
-        <div class="pokemon">
-            <img src="/images/pokemonTitle.png" alt="Pokemon">
-        </div>
-        <div class="navBarsClose ">
-            <img src="/images/closeBall.png" alt="Pokemon Ball">
-        </div>
-        <div class="navBarsOpen hide">
-            <img src="/images/openBall.png" alt="Pokemon Ball">
-        </div>
-        <nav class="nav hide">
-            <ul>
-                <li><a href="/home">Home</a></li>
-                <li><a href="/dashboard">DashBoard</a></li>
-                <li><a href="/characters">Competition</a></li>
-                <li><a href="/html/aboutUs.html">About Us</a></li>
-                <li><a href="/">Logout</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="info-container">
-            <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi est praesentium
-                aliquid rerum
-                culpa soluta nobis cupiditate eius, beatae, eum dicta quam tempora quis ad ipsa. Quisquam molestiae
-                iste corporis?</p>
-        </section>
-        <section class="cards">
-            <h2 class="cards-title">Featured Pokémon</h2>
-            <i class="fas fa-chevron-left left"></i>
-            <div class="slider">
-                <% pokemons.forEach((pokemon,index)=> { %>
-                    <% if(index===2) {%>
-                        <div class="card active" id=<%=index %> >
-                            <a href="/description"><img src=<%=pokemon.image %> alt="pokemon" class='img'></a>
-                        </div>
-                        <% } else { %>
-                            <div class="card hold" id=<%=index %> >
-                                <a href="/description"> <img src=<%=pokemon.image %> alt="pokemon"
-                                    class='img'></a>
-                            </div>
-                            <% } %>
-                                <% }); %>
+    <body>
+        <header class="banner">
+            <div class="pokemon">
+                <img src="/images/pokemonTitle.png" alt="Pokemon">
             </div>
-            <i class="fas fa-chevron-right right"></i>
-        </section>
-        <section class="competition">
-            <a href="/characters" class="start">Start Your Competition</a>
-        </section>
-    </main>
+            <div class="navBarsClose ">
+                <img src="/images/closeBall.png" alt="Pokemon Ball">
+            </div>
+            <div class="navBarsOpen hide">
+                <img src="/images/openBall.png" alt="Pokemon Ball">
+            </div>
+            <nav class="nav hide">
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/dashboard">DashBoard</a></li>
+                    <li><a href="/characters">Competition</a></li>
+                    <li><a href="/html/aboutUs.html">About Us</a></li>
+                    <li><a href="/">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="info-container">
+                <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi est praesentium
+                    aliquid rerum
+                    culpa soluta nobis cupiditate eius, beatae, eum dicta quam tempora quis ad ipsa. Quisquam molestiae
+                    iste corporis?</p>
+            </section>
+            <section class="cards">
+                <h2 class="cards-title">Featured Pokémon</h2>
+                <i class="fas fa-chevron-left left"></i>
+                <div class="slider">
+                    <% pokemons.forEach((pokemon,index)=> { %>
+                        <% if(index===2) {%>
+                            <div class="card active" id=<%=index %> >
+                                <a href="/description/<%=pokemon.pokemon_id %>"><img src=<%=pokemon.image %>
+                                    alt=" pokemon" class='img'></a>
+                            </div>
+                            <% } else { %>
+                                <div class="card hold" id=<%=index %> >
+                                    <a href="/description/<%=pokemon.pokemon_id %>"> <img src=<%=pokemon.image %>
+                                        alt="pokemon"
+                                        class='img'></a>
+                                </div>
+                                <% } %>
+                                    <% }); %>
+                </div>
+                <i class="fas fa-chevron-right right"></i>
+            </section>
+            <section class="competition">
+                <a href="/characters" class="start">Start Your Competition</a>
+            </section>
+        </main>
+
 
     <%- include('./../layout/footer') %>
 
