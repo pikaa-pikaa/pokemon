@@ -44,13 +44,13 @@
             </nav>
         </header>
         <main>
-               <h1>Dashboard</h1>
-                <div class="cards">        
-                    <% pokemons.forEach((pokemon)=> { %>
-                                <div class="card">
-                                    <a href="/description"><img src=<%=pokemon.image %> alt="pokemon"class='img'></a>
-                                   
-                                </div>
+            <h1>Dashboard</h1>
+            <section class="cards">
+                <% pokemons.forEach((pokemon)=> { %>
+                    <div class="card">
+                        <a href="/description/<%=pokemon.pokemon_id %>"><img src=<%=pokemon.image %>
+                            alt="pokemon"class='img'></a>
+                    </div>
                     <% }); %>
                   
                    

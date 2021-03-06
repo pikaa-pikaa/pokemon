@@ -38,7 +38,7 @@ header {
 
 main {
 	display: table-row;
-	height: 100%;
+	width: 100%;
 }
 
 footer {
@@ -96,6 +96,8 @@ ul {
 	color: var(--fifthColor);
 }
 
+
+.pokemon img,
 .navBarsClose img,
 .navBarsOpen img,
 .card img {
@@ -120,103 +122,7 @@ ul {
 /* end of header style */
 
 /* main style */
-main {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	margin-top: 3rem;
-}
 
-h1 {
-	margin: 2rem 0;
-	letter-spacing: 0.3rem;
-	font-size: 200%;
-	background-color: var(--mainColor);
-	color: var(--forthColor);
-	padding: 0.5rem 2rem;
-	border-radius: 0.5rem;
-}
-
-.characters {
-	width: 70%;
-	height: 90%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-wrap: wrap;
-}
-
-.character {
-	width: 20%;
-	height: 25rem;
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	transition: var(--mainTransition);
-}
-
-.character img {
-	width: 10rem;
-	height: 18rem;
-}
-
-.character p {
-	margin-top: 2rem;
-	letter-spacing: 0.1rem;
-	font-size: 110%;
-	background-color: var(--secondColor);
-	color: var(--thirdColor);
-	padding: 0.5rem 1rem;
-	border-radius: 0.5rem;
-}
-
-.random {
-	width: 22%;
-	height: 30rem;
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	transition: var(--mainTransition);
-}
-
-.random img {
-	width: 17rem;
-	height: 17rem;
-}
-
-.start {
-	margin-top: 2rem;
-	letter-spacing: 0.1rem;
-	font-size: 110%;
-	background-color: var(--fifthColor);
-	color: var(--forthColor);
-	padding: 0.5rem 1rem;
-	border-radius: 0.5rem;
-	text-align: center;
-}
-
-.fight {
-	margin-top: 2rem;
-	letter-spacing: 0.1rem;
-	font-size: 130%;
-	background-color: var(--mainColor);
-	color: var(--forthColor);
-	padding: 0.5rem 1rem;
-	border-radius: 0.5rem;
-	transition: var(--mainTransition);
-}
-
-.fight:hover {
-	background-color: var(--darkColor);
-	color: var(--thirdColor);
-	transform: scale(1.2);
-	cursor: pointer;
-}
 
 /* end of main style */
 

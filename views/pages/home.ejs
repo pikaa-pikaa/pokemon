@@ -30,14 +30,22 @@
             <div class="pokemon">
                 <img src="/images/pokemonTitle.png" alt="Pokemon">
             </div>
-            <div class="navBarsClose ">
-                <img src="/images/closeBall.png" alt="Pokemon Ball">
+            <div class="hi">
+                <img src="/images/hi.png" alt="Pokemon">
             </div>
-            <div class="navBarsOpen hide">
-                <img src="/images/openBall.png" alt="Pokemon Ball">
-            </div>
-            <nav class="nav hide">
-                <ul>
+            <p class="hello">Hi! Mohammed</p>
+
+            <nav class="nav">
+                <div class="navBarsClose ">
+                    <img src="/images/closeBall.png" alt="Pokemon Ball">
+                </div>
+                <div class="navBarsOpen hide">
+                    <img src="/images/openBall.png" alt="Pokemon Ball">
+                </div>
+                <div class="navbar hide">
+                    <img src="/images/nav.png" alt="navbar">
+                </div>
+                <ul class="links hide">
                     <li><a href="/home">Home</a></li>
                     <li><a href="/dashboard">DashBoard</a></li>
                     <li><a href="/characters">Competition</a></li>
@@ -60,11 +68,13 @@
                     <% pokemons.forEach((pokemon,index)=> { %>
                         <% if(index===2) {%>
                             <div class="card active" id=<%=index %> >
-                                <a href="/description"><img src=<%=pokemon.image %> alt="pokemon" class='img'></a>
+                                <a href="/description/<%=pokemon.pokemon_id %>"><img src=<%=pokemon.image %>
+                                    alt=" pokemon" class='img'></a>
                             </div>
                             <% } else { %>
                                 <div class="card hold" id=<%=index %> >
-                                    <a href="/description"> <img src=<%=pokemon.image %> alt="pokemon"
+                                    <a href="/description/<%=pokemon.pokemon_id %>"> <img src=<%=pokemon.image %>
+                                        alt="pokemon"
                                         class='img'></a>
                                 </div>
                                 <% } %>
@@ -76,6 +86,7 @@
                 <a href="/characters" class="start">Start Your Competition</a>
             </section>
         </main>
+
 
         <%- include('./../layout/footer') %>
 
