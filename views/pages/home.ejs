@@ -40,7 +40,7 @@
                 <ul>
                     <li><a href="/home">Home</a></li>
                     <li><a href="/dashboard">DashBoard</a></li>
-                    <li><a href="/competition">Competition</a></li>
+                    <li><a href="/characters">Competition</a></li>
                     <li><a href="/html/aboutUs.html">About Us</a></li>
                     <li><a href="/">Logout</a></li>
                 </ul>
@@ -60,11 +60,11 @@
                     <% pokemons.forEach((pokemon,index)=> { %>
                         <% if(index===2) {%>
                             <div class="card active" id=<%=index %> >
-                                <a href="description.ejs"><img src=<%=pokemon.image %> alt="pokemon" class='img'></a>
+                                <a href="/description"><img src=<%=pokemon.image %> alt="pokemon" class='img'></a>
                             </div>
                             <% } else { %>
                                 <div class="card hold" id=<%=index %> >
-                                    <a href="description.ejs"> <img src=<%=pokemon.image %> alt="pokemon"
+                                    <a href="/description"> <img src=<%=pokemon.image %> alt="pokemon"
                                         class='img'></a>
                                 </div>
                                 <% } %>

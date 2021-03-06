@@ -27,7 +27,7 @@ app.set('view engine', 'ejs');
 //routes
 app.get('/home', homeHandler);
 app.get('/characters', (req, res) => {
-	res.redirect('/html/characters.html');
+	res.render('pages/characters');
 });
 app.get('/dashboard', dashboardHandler);
 
