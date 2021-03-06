@@ -62,7 +62,7 @@ Communication plan and strategy :
 ![aboutUs](wireframe/aboutUs.png)
 
 - Characters
-![characters](public/images/wireframe/characterspage.png)
+![characters](wireframe/characterspage.png)
 
 - Start game
 ![Start](whoisgonnastartpage.png)
