@@ -29,7 +29,7 @@ app.set('view engine', 'ejs');
 //routes
 app.get('/home', homeHandler);
 app.get('/characters', charactersHandler);
-app.get('/rockPaperSissiors', rockPaperHandler);
+app.get('/rockPaperSissiors/:trainer', rockPaperHandler);
 app.get('/dashboard', dashboardHandler);
 
 // listen
