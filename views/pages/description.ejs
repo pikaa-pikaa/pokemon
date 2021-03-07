@@ -44,56 +44,68 @@
         </nav>
     </header>
     <main>
-        <h3 class="name">
-            <%= pokemonDescription.name %>
-        </h3>
-        <br>
+        <% console.log(pokemonDescription) %>
 
-        <div class="bigContainer">
-            <div class="rContainer">
-                <img src="<%= pokemonDescription.image %> " alt="<%=pokemonDescription.name%>">
+            <h3 class="name">
+                <%= pokemonDescription.name %>
+            </h3>
+            <br>
+
+
+
+            <div class="bigContainer">
+                <div class="rContainer">
+                    <img id="pokemonImg" src="<%= pokemonDescription.image %> " alt="<%=pokemonDescription.name%>">
+                    <div class="hpContainer">
+                        <h4 class="hpText">Hp</h4>
+                        <div class="fullHp"></div>
+                        <div class="currentHp" style="width: <%=pokemonDescription.hp %>px;"></div>
+                        <p class="numHp">
+                            <%=pokemonDescription.hp %>
+                        </p>
+                    </div>
+                </div>
+                <div class="lContainer">
+                    <div class="description">
+                        <ul>
+                            <li>Description</li>
+                            <li>
+                                <%= pokemonDescription.description %>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="abilities">
+                        <ul>
+                            <li>Abilities</li>
+                            <li>
+                                <%= pokemonDescription.abilities %>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="att_def_waek">
+                        <ul>
+                            <li>Attack</li>
+                            <li>
+                                <%= pokemonDescription.attack %>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>Defence</li>
+                            <li>
+                                <%= pokemonDescription.defence %>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>Weaknesses</li>
+                            <li>
+                                <%= pokemonDescription.weaknesses %>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="lContainer">
-                <div class="description">
-                    <ul>
-                        <li>Description</li>
-                        <li>
-                            <%= pokemonDescription.description %>
-                        </li>
-                    </ul>
-                </div>
-                <div class="abilities">
-                    <ul>
-                        <li>Abilities</li>
-                        <li>
-                            <%= pokemonDescription.abilities %>
-                        </li>
-                    </ul>
-
-                </div>
-                <div class="att_def_waek">
-                    <ul>
-                        <li>Attack</li>
-                        <li>
-                            <%= pokemonDescription.attack %>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>Defence</li>
-                        <li>
-                            <%= pokemonDescription.defence %>
-                        </li>
-                    </ul>
-
-                    <ul>
-                        <li>Weaknesses</li>
-                        <li>
-                            <%= pokemonDescription.weaknesses %>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
     </main>
 
     <%- include('./../layout/footer') %>
