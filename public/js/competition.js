@@ -15,6 +15,10 @@ $(function () {
 
 	$('.navBarsOpen').on('click', pop());
 	//end navbar
+
+	//card
+
+	//end of card
 });
 
 let i = 0;

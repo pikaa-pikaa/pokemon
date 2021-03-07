@@ -67,7 +67,7 @@
             <section class="cards">
                 <% pokemons.forEach((pokemon)=> { %>
                     <div class="card">
-                        <a href="/description/<%=pokemon.pokemon_id %>">
+                        <a href="/description/<%=user.user_id %>/<%=pokemon.pokemon_id %>">
                             <img src=<%=pokemon.image %> alt="pokemon" class='img'>
                         </a>
                     </div>
