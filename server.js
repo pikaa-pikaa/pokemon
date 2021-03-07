@@ -46,6 +46,10 @@ app.get('/description/:pokemonId', descriptionHandler);
 app.get('/characters/:userId', charactersHandler);
 app.get('/rockPaperSissiors/:userId/:trainer', rockPaperHandler);
 app.get('/competition/:userId', competitionHandler);
+app.get('/aboutUs/:userId', (req, res) => {
+	let userId = req.params.userId;
+	res.render('pages/aboutUs', { userId });
+});
 
 // listen
 const PORT = process.env.PORT || 3000;
