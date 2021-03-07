@@ -28,7 +28,7 @@ function addedPokemonForUser(userId) {
 		results.rows.forEach((id) => {
 			let SQL = `INSERT INTO pokemons_users (pokemon_id, user_id) VALUES ($1,$2) RETURNING *;`;
 			let values = [id.pokemon_id, userId];
-			client.query(SQL, values).then((results) => {});
+			return client.query(SQL, values).then((results) => {});
 		});
 	});
 }
@@ -36,7 +36,7 @@ function addedPokemonForUser(userId) {
 function addPokemonsFromApi() {
 	let page = generateRandomPage();
 	let url = `https://api.pokemontcg.io/v2/cards?page=${page}`;
-	superagent.get(url).then((results) => {
+	return superagent.get(url).then((results) => {
 		let { data } = results.body;
 		let pokemons = data
 			.filter((item) => {
@@ -79,7 +79,7 @@ function addPokemonsFromApi() {
 				evolvesTo,
 			];
 
-			client
+			return client
 				.query(sql, safeValues)
 				.then((results) => {})
 				.catch((err) => {

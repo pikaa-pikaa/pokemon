@@ -21,7 +21,7 @@
         <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
 
         <!-- style -->
-        <link rel="stylesheet" href="/css/dashboard/dashboard.css">
+        <link rel="stylesheet" href="/css/aboutUs/aboutUs.css">
 
     </head>
 
@@ -33,28 +33,28 @@
                 <div class="menuItems">
                     <div class="item1" id="item1">
                         <center>
-                            <a href="/home/<%=user.user_id %>" title="home">
+                            <a href="/home/<%= userId %> " title='home'>
                                 <i class="fas fa-home"></i>
                             </a>
                         </center>
                     </div>
                     <div class="item2" id="item2">
                         <center>
-                            <a href="/characters/<%=user.user_id %>" title="competition">
+                            <a href="/characters/<%= userId %>" title='competition'>
                                 <i class="fas fa-gamepad"></i>
                             </a>
                         </center>
                     </div>
                     <div class="item3" id="item3">
                         <center>
-                            <a href="/aboutUs/<%=user.user_id %>" title="about Us">
-                                <i class="fas fa-info"></i>
+                            <a href="/dashboard/<%= userId %>" title='dashboard'>
+                                <i class="fas fa-id-card"></i>
                             </a>
                         </center>
                     </div>
-                    <div class="item4" id="item4">
+                    <div class="item4" id="item4" title='logout'>
                         <center>
-                            <a href="/" title="logout">
+                            <a href="/">
                                 <i class="fas fa-sign-out-alt"></i>
                             </a>
                         </center>
@@ -63,16 +63,36 @@
             </div>
         </header>
         <main>
-            <h1>Dashboard</h1>
-            <section class="cards">
-                <% pokemons.forEach((pokemon)=> { %>
-                    <div class="card">
-                        <a href="/description/<%=pokemon.pokemon_id %>">
-                            <img src=<%=pokemon.image %> alt="pokemon" class='img'>
-                        </a>
+            <div class="bigContainer">
+                <div class="containerUp">
+                    <div class="member malek">
+                        <img src="/images/malek.jpg" alt="Malek Esmail photo">
+                        <h5>Malek Esmail</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellat explicabo tempore
+                            possimus</p>
                     </div>
-                    <% }); %>
-                        </div>
+                    <div class="member mohammed">
+                        <img src="/images/malek.jpg" alt="Mohammed Khamees photo">
+                        <h5>Mohammed Khamees</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellat explicabo tempore
+                            possimus</p>
+                    </div>
+                </div>
+                <div class="containerDown">
+                    <div class="member lina">
+                        <img src="/images/malek.jpg" alt="Lina Al-Mashaikh photo">
+                        <h5>Lina Al-Mashaikh</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellat explicabo tempore
+                            possimus</p>
+                    </div>
+                    <div class="member aya">
+                        <img src="/images/malek.jpg" alt="Aya Bejawe photo">
+                        <h5>Aya Bejawe</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellat explicabo tempore
+                            possimus</p>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <%- include('./../layout/footer') %>
@@ -81,7 +101,8 @@
             <script src=" https://code.jquery.com/jquery-3.5.1.js"></script>
 
             <!-- js -->
-            <script src="/js/dashboard.js"></script>
+            <script src="/js/aboutUs.js"></script>
+
     </body>
 
 </html>
