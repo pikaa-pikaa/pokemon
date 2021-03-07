@@ -12,6 +12,7 @@ const characters = [
 ];
 
 const rockPaperHandler = (req, res) => {
+	let userId = req.params.userId;
 	let trainer = req.params.trainer;
 	let choosenTrainer = characters.find(
 		(character) => character.id === parseInt(trainer),
@@ -32,7 +33,8 @@ const rockPaperHandler = (req, res) => {
 	res.render('pages/rockPaperSissiors', {
 		choosenTrainer: { turn: 1, choosenTrainer },
 		randomChoosenTrainer: { turn: 2, randomChoosenTrainer },
-		first: first,
+		first,
+		userId,
 	});
 };
 

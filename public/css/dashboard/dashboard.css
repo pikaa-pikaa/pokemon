@@ -70,7 +70,7 @@ ul {
 	right: 0;
 	top: 0;
 	left: 90%;
-	z-index: 2;
+	z-index: 3;
 	cursor: pointer;
 }
 
@@ -83,6 +83,7 @@ ul {
 	right: 0;
 	top: 0;
 	left: 90%;
+	z-index: 2;
 }
 .menuItems > div {
 	background-color: white;
@@ -138,7 +139,6 @@ main {
 	position: relative;
 	transition: var(--mainTransition);
 	margin-top: 12rem;
-	z-index: -1;
 }
 
 .card {
@@ -155,9 +155,6 @@ main {
 	height: 100%;
 }
 
-.card:hover {
-	transform: scale(1.5);
-}
 /* end of cards */
 
 /* end of main style */

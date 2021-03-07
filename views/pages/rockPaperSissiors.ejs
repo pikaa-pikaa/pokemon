@@ -34,7 +34,7 @@
                 <div class="menuItems">
                     <div class="item1" id="item1">
                         <center>
-                            <a href="/home">
+                            <a href="/home/<%= userId %>">
                                 <i class="fas fa-home"></i>
 
                             </a>
@@ -42,7 +42,7 @@
                     </div>
                     <div class="item2" id="item2">
                         <center>
-                            <a href="/dashboard">
+                            <a href="/dashboard/<%= userId %>">
                                 <i class="fas fa-id-card"></i>
                             </a>
                         </center>
@@ -85,7 +85,7 @@
                                     <%=randomChoosenTrainer.randomChoosenTrainer.name %> begin the first round
                                         <% } %>
                     </p>
-                    <a href="/competition" class="fight">Start your Fight</a>
+                    <a href="/competition/<%= userId %>" class="fight">Start your Fight</a>
                 </div>
                 <div class="character computer">
                     <img src="/images/characters/<%=randomChoosenTrainer.randomChoosenTrainer.id %>.png"

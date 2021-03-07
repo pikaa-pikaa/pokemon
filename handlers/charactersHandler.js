@@ -1,5 +1,6 @@
 const charactersHandler = (req, res) => {
-	res.render('pages/characters');
+	let userId = req.params.userId;
+	res.render('pages/characters', { userId });
 };
 
 module.exports = charactersHandler;
