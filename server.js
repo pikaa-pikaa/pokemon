@@ -36,7 +36,7 @@ app.post('/login', loginHandler);
 app.post('/signUp', signUpHandler);
 app.get('/home/:userId', homeHandler);
 app.get('/dashboard/:userId', dashboardHandler);
-app.get('/description/:pokemonId', descriptionHandler);
+app.get('/description/:userId/:pokemonId', descriptionHandler);
 app.get('/characters/:userId', charactersHandler);
 app.get('/rockPaperSissiors/:userId/:trainer', rockPaperHandler);
 app.get('/competition/:userId', competitionHandler);

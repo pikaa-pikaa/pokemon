@@ -6,7 +6,7 @@ function Pokemon(data) {
 		: 'No description for this Pokemon becuase it is rare';
 	this.level = data.level;
 	this.hp = parseInt(data.hp);
-	this.types = data.types;
+	this.types = data.types.join('');
 	this.abilities = data.abilities
 		? data.abilities.map((ability) => ability.name).join(' ')
 		: 'There are no abilities for this pokemon';
@@ -24,7 +24,7 @@ function Pokemon(data) {
 		? data.evolvesFrom
 		: 'First Version of This kind';
 	this.evolvesTo = data.evolvesTo
-		? data.evolvesTo
+		? data.evolvesTo.join('')
 		: 'Last Version of This kind';
 }
 

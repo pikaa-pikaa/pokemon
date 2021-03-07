@@ -69,9 +69,31 @@
                 </div>
             </aside>
             <div class="main">
-                <section class="user">user1</section>
-                <section class="ring">ring</section>
-                <section class="user">user2</section>
+                <section class="computer">
+                    <div class="cards">
+                        <% for (let index=0; index < 5; index++) { %>
+                            <div class="card">
+                                <img src="<%=computerCards[index].image %>" alt="card">
+                                <p>
+                                    <%=computerCards[index].hp %> HP
+                                </p>
+                            </div>
+                            <% } %>
+                    </div>
+                </section>
+                <section class="ring"></section>
+                <section class="user">
+                    <div class="cards">
+                        <% for (let index=0; index < 5; index++) { %>
+                            <div class="card">
+                                <p>
+                                    <%=userCards[index].hp %> HP
+                                </p>
+                                <img src="<%=userCards[index].image %>" alt="card">
+                            </div>
+                            <% } %>
+                    </div>
+                </section>
             </div>
             <aside class="user2">
                 <div class="img-container2">

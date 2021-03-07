@@ -85,12 +85,14 @@
                     <% pokemons.forEach((pokemon,index)=> { %>
                         <% if(index===2) {%>
                             <div class="card active" id=<%=index %> >
-                                <a href="/description/<%=pokemon.pokemon_id %>"><img src=<%=pokemon.image %>
+                                <a href="/description/<%=user.user_id %>/<%=pokemon.pokemon_id %>"><img
+                                        src=<%=pokemon.image %>
                                     alt=" pokemon" class='img'></a>
                             </div>
                             <% } else { %>
                                 <div class="card hold" id=<%=index %> >
-                                    <a href="/description/<%=pokemon.pokemon_id %>"> <img src=<%=pokemon.image %>
+                                    <a href="/description/<%=user.user_id %>/<%=pokemon.pokemon_id %>"> <img
+                                            src=<%=pokemon.image %>
                                         alt="pokemon"
                                         class='img'></a>
                                 </div>
