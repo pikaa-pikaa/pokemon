@@ -1,9 +1,9 @@
 const client = require('./../data/database');
 
 const loginHandler = (req, res) => {
-	usernamedata = '';
 	let username = req.body.username;
 	let password = req.body.password;
+
 	let SQL = 'SELECT * FROM  users WHERE username=$1 AND password=$2;';
 	let values = [username, password];
 	client.query(SQL, values).then((results) => {
@@ -14,5 +14,6 @@ const loginHandler = (req, res) => {
 		}
 	});
 };
+
 
 module.exports = loginHandler;
