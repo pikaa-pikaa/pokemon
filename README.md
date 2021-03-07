@@ -13,7 +13,7 @@
 
 ## Conflict Plan
 
-The group process to resolve conflict: 
+The group process to resolve conflict:
 - We can discus the problem and try to clearify the points.
 - There will be tasks for each team member debend on specific time , also all the group must be collaborate.
 - To escalate the conflict ifresolution attempts are unsuccessful: We can get back to our leader instructor.
@@ -43,11 +43,10 @@ Communication plan and strategy :
 # Wireframes 
 
 - Signup page
-
-![Signup](wireframe/sginup page.png)
+![Signup](wireframe/signUp.png)
 
 - Login page
-![Login](wireframe/login page.png)
+![Login](wireframe/login.png)
 
 - Homepage
 ![homepage](wireframe/homepage.png)
@@ -73,4 +72,8 @@ Communication plan and strategy :
 - Win or Lose page
 ![winorlose](wireframe/winorlosepage.png)
 
+********************************
+
+- Domain Modeling
+![Domain](wireframe/domain.png)
 
