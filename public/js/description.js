@@ -1,6 +1,5 @@
 $(function () {
   //navbar
-  console.log("hi");
   $(".navBarsClose").on("click", function () {
     $(".navBarsOpen").removeClass("hide");
     $(".nav").removeClass("hide");
@@ -14,10 +13,19 @@ $(function () {
   });
 
   //end navbar
-
+  // console.log(pokemonDescription);
   //animate the description Deatils
-  alert("hi");
-  $("img").animate(
+  // alert("hi");
+
+  $(".fullHp").append($(".currentHp"));
+  // $("#pokemonImg").animate(
+  //   {
+  //     height: "522",
+  //   },
+  //   1000
+  // );
+
+  $(".numHp").animate(
     {
       width: "100",
     },
