@@ -13,7 +13,7 @@
 
 ## Conflict Plan
 
-The group process to resolve conflict: 
+The group process to resolve conflict:
 - We can discus the problem and try to clearify the points.
 - There will be tasks for each team member debend on specific time , also all the group must be collaborate.
 - To escalate the conflict ifresolution attempts are unsuccessful: We can get back to our leader instructor.
@@ -44,33 +44,37 @@ Communication plan and strategy :
 
 - Signup page
 
-![Signup](wireframe/sginup page.png)
+![Signup](wireframe/signUp.png)
 
 - Login page
-![Login](wireframe/login page.png=25x25)
+![Login](wireframe/login.png)
 
 - Homepage
-![homepage](wireframe/homepage.png=25x25)
+![homepage](wireframe/homepage.png)
 
 - Dashboard page
-![Dashboard](wireframe/dashboardpage.png=25x25)
+![Dashboard](wireframe/dashboardpage.png)
 
 - Descreiption page
-![Descreiption](wireframe/descreiptionpage.png=25x25)
+![Descreiption](wireframe/descreiptionpage.png)
 
 - AboutUs
 ![aboutUs](wireframe/aboutUs.png=25x25)
 
 - Characters
-![characters](public/images/wireframe/characterspage.png=25x25)
+![characters](wireframe/characterspage.png)
 
 - Start game
-![Start](whoisgonnastartpage.png=25x25)
+![Start](whoisgonnastartpage.png)
 
 - Competition page
-![competition](competitionpage.png=25x25)
+![competition](competitionpage.png)
 
 - Win or Lose page
 ![winorlose](wireframe/winorlosepage.png)
 
+********************************
+
+- Domain Modeling
+![Domain](wireframe/domain.png)
 
