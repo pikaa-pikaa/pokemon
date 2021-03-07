@@ -49,7 +49,7 @@
                     </div>
                     <div class="item2" id="item2">
                         <center>
-                            <a href="/characters/<%=user.user_id %>" title="characters">
+                            <a href="/characters/<%=user.user_id %>" title="competition">
                                 <i class="fas fa-gamepad"></i>
                             </a>
                         </center>
@@ -100,7 +100,7 @@
                 <i class="fas fa-chevron-right right"></i>
             </section>
             <section class="competition">
-                <a href="/characters" class="start">Start Your Competition</a>
+                <a href="/characters/<%=user.user_id %>" class="start">Start Your Competition</a>
             </section>
         </main>
 

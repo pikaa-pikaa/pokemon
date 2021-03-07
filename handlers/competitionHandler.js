@@ -1,7 +1,8 @@
 const client = require('./../data/database');
 
 const competitionHandler = (req, res) => {
-	res.render('pages/competition');
+	let userId = req.params.userId;
+	res.render('pages/competition', { userId });
 };
 
 module.exports = competitionHandler;
