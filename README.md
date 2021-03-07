@@ -43,7 +43,6 @@ Communication plan and strategy :
 # Wireframes 
 
 - Signup page
-
 ![Signup](wireframe/signUp.png)
 
 - Login page
@@ -59,16 +58,16 @@ Communication plan and strategy :
 ![Descreiption](wireframe/descreiptionpage.png)
 
 - AboutUs
-![aboutUs](wireframe/aboutUs.png=25x25)
+![aboutUs](wireframe/aboutUs.png)
 
 - Characters
 ![characters](wireframe/characterspage.png)
 
 - Start game
-![Start](whoisgonnastartpage.png)
+![Start](wireframe/whoisgonnastartpage.png)
 
 - Competition page
-![competition](competitionpage.png)
+![competition](wireframe/competitionpage.png)
 
 - Win or Lose page
 ![winorlose](wireframe/winorlosepage.png)

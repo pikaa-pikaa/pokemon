@@ -59,6 +59,7 @@ const homeHandler = (req, res) => {
 		let sql2 = 'SELECT * FROM pokemons WHERE hp >= $1 ORDER BY hp LIMIT 6;';
 		let value = [generateRandomHp()];
 		client.query(sql2, value).then((results) => {
+			console.log(results.rows);
 			res.render('pages/home', { pokemons: results.rows });
 		});
 	});

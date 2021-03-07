@@ -27,91 +27,49 @@
 
     <body>
         <header>
-            <!-- <div class="navBarsClose ">
-                <img src="/images/closeBall.png" alt="Pokemon Ball">
-            </div>
-            <div class="navBarsOpen hide">
-                <img src="/images/openBall.png" alt="Pokemon Ball">
-            </div> -->
             <div>
-            <img class="menu" onclick="pop()" src="/images/closeBall.png" alt="Pokemon Ball">
-          
-            <div class="menuItems">   
-                <div class="item1" id="item1">
-                    <center>
-                        <a href="#">
-                            <i class="fas fa-home"></i>
-                            
-                        </a>
-                    </center>
-                </div>
+                <img class="menu navBarsClose" onclick="pop()" src="/images/closeBall.png" alt="Pokemon Ball">
+                <img class="menu navBarsOpen hide" onclick="pop()" src="/images/openBall.png" alt="Pokemon Ball">
+                <div class="menuItems">
+                    <div class="item1" id="item1">
+                        <center>
+                            <a href="/home">
+                                <i class="fas fa-home"></i>
 
-                <!-- <div class="item2" id="item2">
+                            </a>
+                        </center>
+                    </div>
+
+                    <!-- <div class="item2" id="item2">
                     <center>
-                        <a href="#">
+                        <a href="/dashboard">
                             <i class="fas fa-id-card"></i>
                         </a>
                     </center>
                  </div> -->
-                <div class="item2" id="item2">
-                    <center>
-                        <a href="#">
-                            <i class="fas fa-gamepad"></i>
-                        </a>
-                    </center>
+                    <div class="item2" id="item2">
+                        <center>
+                            <a href="/characters">
+                                <i class="fas fa-gamepad"></i>
+                            </a>
+                        </center>
+                    </div>
+                    <div class="item3" id="item3">
+                        <center>
+                            <a href="/html/aboutUs.html">
+                                <i class="fas fa-info"></i>
+                            </a>
+                        </center>
+                    </div>
+                    <div class="item4" id="item4">
+                        <center>
+                            <a href="/">
+                                <i class="fas fa-sign-out-alt"></i>
+                            </a>
+                        </center>
+                    </div>
                 </div>
-                     <div class="item3" id="item3">
-                    <center>
-                        <a href="#">
-                            <i class="fas fa-info"></i>           
-                        </a>
-                    </center>
-                </div>
-                 <div class="item4" id="item4">
-                    <center>
-                        <a href="#">
-                    <i class="fas fa-sign-out-alt"></i>         
-                        </a>
-                    </center>
-                </div>
-                <script type="text/javascript">
-                var i=0;
-                function pop(){
-                    if(i == 0){
-                        document.getElementById("item1").style.transform = 'translate(-130px,-13px)';
-                        document.getElementById("item2").style.transform = 'translate(-122px,71px)';
-                        document.getElementById("item3").style.transform = 'translate(-72px,142px)';
-                        document.getElementById("item4").style.transform = 'translate( 15px,155px)';
-
-                        
-                        i=1;
-                    }
-                    else{
-                        document.getElementById("item1").style.transform = 'translate(0)';
-                        document.getElementById("item2").style.transform = 'translate(0)';
-                        document.getElementById("item3").style.transform = 'translate(0)';
-                        document.getElementById("item4").style.transform = 'translate(0)';
-
-                        
-                        i=0;
-                    }
-                }
-
-
-                </script>
             </div>
-            </div>
-
-
-            <!-- <nav class="nav hide">
-                <ul>
-                    <li><a href="/home">Home</a></li>
-                    <li><a href="/dashboard">DashBoard</a></li>
-                    <li><a href="/competition">Competition</a></li>
-                    <li><a href="/html/aboutUs.html">About Us</a></li>
-                    <li><a href="/">Logout</a></li>
-                </ul>
-            </nav> -->
         </header>
         <main>
             <h1>Dashboard</h1>
@@ -122,10 +80,7 @@
                             alt="pokemon"class='img'></a>
                     </div>
                     <% }); %>
-                  
-                   
-              
-            </div>
+                        </div>
         </main>
 
         <%- include('./../layout/footer') %>
