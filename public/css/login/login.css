@@ -1,11 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
 * {
 	box-sizing: border-box;
 }
 
+:root {
+	--mainTransition: all 0.3s ease-in-out;
+	--mainColor: rgb(149, 0, 0);
+	--secondColor: rgb(0, 72, 141);
+	--thirdColor: rgb(240, 207, 0);
+	--forthColor: white;
+	--fifthColor: rgb(58, 85, 156);
+	--darkColor: black;
+}
+
 body {
-    background-image: url('./../../images/back.jpg');	
+    background-image: url('./../../images/back.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
     background-position: center;
@@ -13,9 +22,16 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	font-family: 'Montserrat', sans-serif;
-	height: 100%;
+	background-size: 100%;
 	margin: 60px  20px;
+	color: var(--forthColor);
+	
+}
+.front{
+	position: absolute;
+    bottom: -10%;
+	z-index: 3;
+	
 }
 
 h1 {
@@ -48,11 +64,12 @@ a {
 
 button {
 	border-radius: 20px;
-	border: 1px solid #5b5068;
-	background-color: #414455;
-	color: #FFFFFF;
+	border: 1px solid #e6dc8a;
+	background-color:var(--thirdColor);
+	color: var(--mainColor);
 	font-size: 12px;
-	font-weight: bold;
+	font-weight:700 ;
+
 	padding: 12px 45px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
@@ -73,8 +90,8 @@ button.ghost {
 }
 
 form {
-	background-color: #FFFFFF;
-	display: flex;
+	background: linear-gradient(to right, royalblue 0%, wheat 100%);
+		display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
@@ -92,16 +109,21 @@ input {
 }
 
 .container {
-	background-color: #fff;
-	border-radius: 10px;
-  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
-			0 10px 10px rgba(0,0,0,0.22);
-	position: relative;
+
+    position: relative;
 	overflow: hidden;
-	width: 768px;
+	width: 650px;
 	max-width: 100%;
-	min-height: 480px;
+	height: 425px;
 	margin: auto;
+	/* opacity: .9; */
+	border: solid 4px gray;
+	border-radius: 20px 5px;
+	box-shadow: 0px 0px 5px 5px  rgb(20, 20, 20);
+	z-index: 0;
+
+	
+
 }
 
 .form-container {
@@ -163,9 +185,8 @@ input {
 }
 
 .overlay {
-	background: #a7709f;
-	background: -webkit-linear-gradient(to right, #070844, #53383e);
-	background: linear-gradient(to right, #a283fa, #80579b);
+	background: -webkit-linear-gradient(to right, #0d9c19, #131312);
+	background: linear-gradient(to right, wheat 30%, #FF3300 80%);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
