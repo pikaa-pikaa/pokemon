@@ -40,12 +40,12 @@ app.get('/signup', (req, res) => {
 
 app.post('/login', loginHandler);
 app.post('/signUp', signUpHandler);
-app.get('/home', homeHandler);
-app.get('/dashboard', dashboardHandler);
+app.get('/home/:userId', homeHandler);
+app.get('/dashboard/:userId', dashboardHandler);
 app.get('/description/:pokemonId', descriptionHandler);
-app.get('/characters', charactersHandler);
-app.get('/rockPaperSissiors/:trainer', rockPaperHandler);
-app.get('/competition', competitionHandler);
+app.get('/characters/:userId', charactersHandler);
+app.get('/rockPaperSissiors/:userId/:trainer', rockPaperHandler);
+app.get('/competition/:userId', competitionHandler);
 
 // listen
 const PORT = process.env.PORT || 3000;

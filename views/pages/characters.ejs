@@ -34,15 +34,14 @@
                 <div class="menuItems">
                     <div class="item1" id="item1">
                         <center>
-                            <a href="/home">
+                            <a href="/home/<%= userId %> ">
                                 <i class="fas fa-home"></i>
-
                             </a>
                         </center>
                     </div>
                     <div class="item2" id="item2">
                         <center>
-                            <a href="/dashboard">
+                            <a href="/dashboard/<%= userId %>">
                                 <i class="fas fa-id-card"></i>
                             </a>
                         </center>
@@ -69,43 +68,43 @@
             <h1>Choose Your Trainer</h1>
             <div class="characters">
                 <div class="character">
-                    <a href="/rockPaperSissiors/1"><img src="/images/characters/1.png" alt="Brock"></a>
+                    <a href="/rockPaperSissiors/<%= userId %>/1"><img src="/images/characters/1.png" alt="Brock"></a>
                     <p>Brock</p>
                 </div>
                 <div class="character">
-                    <a href="/rockPaperSissiors/2"><img src="/images/characters/2.png" alt="Kanna"></a>
+                    <a href="/rockPaperSissiors/<%= userId %>/2"><img src="/images/characters/2.png" alt="Kanna"></a>
                     <p>Kanna</p>
                 </div>
                 <div class="character">
-                    <a href="/rockPaperSissiors/3"><img src="/images/characters/3.png" alt="Ash"></a>
+                    <a href="/rockPaperSissiors/<%= userId %>/3"><img src="/images/characters/3.png" alt="Ash"></a>
                     <p>Ash</p>
                 </div>
                 <div class="character">
-                    <a href="/rockPaperSissiors/4"><img src="/images/characters/4.png" alt="Silver"></a>
+                    <a href="/rockPaperSissiors/<%= userId %>/4"><img src="/images/characters/4.png" alt="Silver"></a>
                     <p>Silver</p>
                 </div>
                 <div class="character">
-                    <a href="/rockPaperSissiors/5"><img src="/images/characters/5.png" alt="Serena"></a>
+                    <a href="/rockPaperSissiors/<%= userId %>/5"><img src="/images/characters/5.png" alt="Serena"></a>
                     <p>Serena</p>
                 </div>
                 <div class="character">
-                    <a href="/rockPaperSissiors/6"><img src="/images/characters/6.png" alt="Marlon"></a>
+                    <a href="/rockPaperSissiors/<%= userId %>/6"><img src="/images/characters/6.png" alt="Marlon"></a>
                     <p>Marlon</p>
                 </div>
                 <div class="character">
-                    <a href="/rockPaperSissiors/7"><img src="/images/characters/7.png" alt="Oak"></a>
+                    <a href="/rockPaperSissiors/<%= userId %>/7"><img src="/images/characters/7.png" alt="Oak"></a>
                     <p>Oak</p>
                 </div>
                 <div class="character">
-                    <a href="/rockPaperSissiors/8"><img src="/images/characters/8.png" alt="Ace"></a>
+                    <a href="/rockPaperSissiors/<%= userId %>/8"><img src="/images/characters/8.png" alt="Ace"></a>
                     <p>Ace</p>
                 </div>
                 <div class="character">
-                    <a href="/rockPaperSissiors/9"><img src="/images/characters/9.png" alt="Misty"></a>
+                    <a href="/rockPaperSissiors/<%= userId %>/9"><img src="/images/characters/9.png" alt="Misty"></a>
                     <p>Misty</p>
                 </div>
                 <div class="character">
-                    <a href="/rockPaperSissiors/10"><img src="/images/characters/10.png" alt="Ethan"></a>
+                    <a href="/rockPaperSissiors/<%= userId %>/10"><img src="/images/characters/10.png" alt="Ethan"></a>
                     <p>Ethan</p>
                 </div>
             </div>
@@ -118,7 +117,7 @@
             <script src=" https://code.jquery.com/jquery-3.5.1.js"></script>
 
             <!-- js -->
-            <script src="js/character.js"></script>
+            <script src="/js/character.js"></script>
     </body>
 
 </html>
