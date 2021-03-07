@@ -70,9 +70,9 @@
             </aside>
             <div class="main">
                 <section class="computer">
-                    <div class="cards">
+                    <div class="computerCards">
                         <% for (let index=0; index < 5; index++) { %>
-                            <div class="card">
+                            <div class="computerCard" data-id="<%=computerCards[index].pokemon_id %>">
                                 <img src="<%=computerCards[index].image %>" alt="card">
                                 <p>
                                     <%=computerCards[index].hp %> HP
@@ -81,15 +81,16 @@
                             <% } %>
                     </div>
                 </section>
-                <section class="ring"></section>
+                <section class="ring">
+                </section>
                 <section class="user">
                     <div class="cards">
                         <% for (let index=0; index < 5; index++) { %>
-                            <div class="card">
+                            <div class="card" data-id="<%=userCards[index].pokemon_id %>">
                                 <p>
                                     <%=userCards[index].hp %> HP
                                 </p>
-                                <img src="<%=userCards[index].image %>" alt="card">
+                                <img src=" <%=userCards[index].image %>" alt="card">
                             </div>
                             <% } %>
                     </div>

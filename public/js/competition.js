@@ -17,6 +17,40 @@ $(function () {
 	//end navbar
 
 	//card
+	let cards = document.querySelectorAll('.card');
+	let computerCards = document.querySelectorAll('.computerCard');
+	let randomArr = [];
+	let random = generateRandomIndex();
+	for (let index = 0; index < 5; index++) {
+		while (randomArr.includes(random)) {
+			random = generateRandomIndex();
+		}
+		randomArr.push(random);
+	}
+
+	cards.forEach((card, index) => {
+		card.addEventListener('click', function (e) {
+			e.preventDefault();
+			let userFights = document.querySelectorAll('.userFight');
+			let computerFights = document.querySelectorAll('.computerFight');
+
+			if (userFights.length) {
+				userFights.forEach((userFight) => {
+					userFight.classList.add('hide');
+					userFight.classList.remove('userFight');
+				});
+
+				computerFights.forEach((computerFight) => {
+					computerFight.classList.add('hide');
+					computerFight.classList.remove('computerFight');
+				});
+			}
+
+			let pokemon = e.currentTarget;
+			pokemon.classList.add('userFight');
+			computerCards[randomArr[index]].classList.add('computerFight');
+		});
+	});
 
 	//end of card
 });
@@ -36,4 +70,8 @@ function pop() {
 		$('#item4').css('transform', 'translate(0)');
 		i = 0;
 	}
+}
+
+function generateRandomIndex() {
+	return Math.floor(Math.random() * 5);
 }
