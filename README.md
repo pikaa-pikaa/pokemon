@@ -75,5 +75,6 @@ Communication plan and strategy :
 ********************************
 
 - Domain Modeling
+
 ![Domain](wireframe/domain.png)
 
