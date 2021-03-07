@@ -1,6 +1,6 @@
 $(function () {
   //navbar
-
+  console.log("hi");
   $(".navBarsClose").on("click", function () {
     $(".navBarsOpen").removeClass("hide");
     $(".nav").removeClass("hide");
@@ -14,4 +14,13 @@ $(function () {
   });
 
   //end navbar
+
+  //animate the description Deatils
+  alert("hi");
+  $("img").animate(
+    {
+      width: "100",
+    },
+    3000
+  );
 });
