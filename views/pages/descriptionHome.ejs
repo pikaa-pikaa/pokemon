@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pokémon</title>
+
+        <!-- favicon -->
+        <link rel="shortcut icon" href="https://www.pngkey.com/png/detail/317-3178288_pokemon-go-icon-png.png"
+            type="image/x-icon">
+
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+            integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+            crossorigin="anonymous" />
+
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+
+        <!-- style -->
+        <link rel="stylesheet" href="/css/description/description.css">
+
+    </head>
+
+    <body>
+        <header>
+
+        </header>
+        <main>
+            <h3 class="name">
+                <%= pokemonDescription.name %>
+            </h3>
+            <br>
+
+            <div class="bigContainer">
+                <div class="lContainer">
+                    <img id="pokemonImg" src="<%= pokemonDescription.image %> " alt="<%=pokemonDescription.name%>">
+                    <div class="hpContainer">
+                        <h4 class="hpText">Hp</h4>
+                        <div class="fullHp"></div>
+                        <div class="currentHp" style="width: <%=pokemonDescription.hp %>px;"></div>
+                        <p class="numHp">
+                            <%=pokemonDescription.hp %>
+                        </p>
+                    </div>
+                </div>
+                <div class="rContainer">
+                    <div class="description">
+                        <ul>
+                            <li>
+                                <%= pokemonDescription.description %>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="att_def_waek">
+                        <div class="firstRow">
+                            <div style="display: flex;">
+
+                                <img src="/images/describtionStyle/abilit.webp" alt="abilities">
+                                <ul>
+                                    <li>Abilities</li>
+                                    <li class="words">
+                                        <%= pokemonDescription.abilities %>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="test"></div>
+                            <div style="display: flex;">
+                                <img src="/images/describtionStyle/attack.png" alt="attack">
+
+                                <ul>
+                                    <li>Attack</li>
+                                    <li class="words attack">
+                                        <%= pokemonDescription.attack %>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class=" secRow">
+                            <div style="display: flex;">
+                                <img src="/images/describtionStyle/def.png" alt="Defence">
+                                <ul>
+                                    <li>Defence</li>
+                                    <span class="words">
+                                        <%= pokemonDescription.defence %>
+                                    </span>
+                                </ul>
+                            </div>
+                            <div style="display: flex;">
+                                <img src="/images/describtionStyle/weak.png" alt="Weaknesses">
+                                <ul>
+                                    <li>Weaknesses</li>
+                                    <span class="words">
+                                        <%= pokemonDescription.weaknesses %>
+                                    </span>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <a href="/" class="returnLink">
+                <div class="return">
+                    <i class="fas fa-arrow-circle-left"></i>
+                    <h4>Home Page</h4>
+                </div>
+            </a>
+        </main>
+
+        <%- include('./../layout/footer') %>
+
+
+
+
+            <!-- jQuery -->
+            <script src=" https://code.jquery.com/jquery-3.5.1.js"></script>
+
+            <!-- js -->
+            <script src="/js/description.js"></script>
+    </body>
+
+</html>
