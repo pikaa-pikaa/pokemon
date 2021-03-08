@@ -7,8 +7,8 @@
 }
 
 :root {
-	--mainTransition: all 0.3s ease-in-out;
-	--mainFont: 'DotGothic16', sans-serif;
+	--mainTransition: all 0.5s ease-in-out;
+	--mainFont: 'Yanone Kaffeesatz', sans-serif;
 	--mainColor: rgb(149, 0, 0);
 	--secondColor: rgb(0, 72, 141);
 	--thirdColor: rgb(240, 207, 0);
@@ -69,7 +69,7 @@ header {
 
 .pokemon {
 	position: absolute;
-	top: 50%;
+	top: 30%;
 	left: 25%;
 	width: 40%;
 	height: 30%;
@@ -78,23 +78,24 @@ header {
 
 .hi {
 	position: absolute;
-	top: 30%;
+	top: 35%;
 	left: 70%;
-	width: 15%;
-	height: 15%;
+	width: 15rem;
+	height: 12rem;
 	transform: translate(-50%, -50%);
 	opacity: 0;
 }
 
 .hello {
 	position: absolute;
-	top: 31%;
+	top: 37%;
 	left: 70%;
 	transform: translate(-50%, -50%);
 	z-index: 2;
 	font-size: 150%;
 	text-align: center;
 	opacity: 0;
+	color: var(--mainColor);
 }
 
 .pokemon img,
@@ -106,8 +107,8 @@ header {
 }
 
 .menu {
-	width: 85px;
-	height: 85px;
+	width: 88px;
+	height: 88px;
 	border-radius: 50%;
 	position: fixed;
 	margin: auto;
@@ -138,21 +139,35 @@ header {
 	font-size: 40px;
 	transition: 0.5s linear;
 }
-.fas {
-	position: relative;
-	top: 3px;
-}
+
 a {
 	color: red;
 }
+
+.item1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .item2 {
 	bottom: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .item3 {
-	bottom: 158px;
+	bottom: 160px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
+
 .item4 {
-	bottom: 228px;
+	bottom: 235px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .menuItems > div:hover {
@@ -162,134 +177,17 @@ a {
 	color: white;
 }
 
-/* end of header style */
-
-/* main style */
-.info-container {
-	width: 100%;
-	height: 20rem;
-	background-color: rgba(149, 0, 0, 0.87);
-	color: var(--forthColor);
-	font-size: 200%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	letter-spacing: 0.1rem;
-}
-
-.info {
-	width: 80%;
-	height: 70%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.cards {
-	width: 100%;
-	height: 60rem;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	position: relative;
-	background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-		url('./../../images/gallary.jpg') center/cover no-repeat scroll;
-	overflow: hidden;
-	transition: var(--mainTransition);
-}
-
-.slider {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	overflow: hidden;
-	transition: var(--mainTransition);
-}
-
-.cards-title {
-	position: absolute;
-	top: 16.6%;
-	left: 10%;
-	transform: translateY(-50%);
-	background-color: var(--secondColor);
-	color: var(--thirdColor);
-	border-top-right-radius: 1rem;
-	border-top-left-radius: 1rem;
-	letter-spacing: 0.15rem;
-	padding: 1rem 2rem;
-	z-index: 5;
-}
-
-.card {
-	flex: 0 0 20%;
-	width: 10%;
-	height: 60%;
-	border-radius: 1rem;
-	overflow: hidden;
-}
-
-.active {
-	transform: scale(1.1);
-	z-index: 2;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 27rem;
-	height: 40rem;
-}
-
-.hold {
-	background-color: black;
-	opacity: 0.5;
-}
-
-.left {
-	position: absolute;
-	top: 50%;
-	left: 0;
-	transform: translate(0, -50%);
-	background-color: var(--mainColor);
-	color: var(--forthColor);
-	font-size: 300%;
-	padding: 2rem 1rem;
-	border-top-right-radius: 1rem;
-	border-bottom-right-radius: 1rem;
-	transition: var(--mainTransition);
-	z-index: 5;
-}
-
-.right {
-	position: absolute;
-	top: 50%;
-	left: 100%;
-	transform: translate(-100%, -50%);
-	background-color: var(--mainColor);
-	color: var(--forthColor);
-	font-size: 300%;
-	padding: 2rem 1rem;
-	border-top-left-radius: 1rem;
-	border-bottom-left-radius: 1rem;
-	transition: var(--mainTransition);
-	z-index: 5;
-}
-
-.left:hover,
-.right:hover {
-	background-color: var(--fifthColor);
-	color: var(--forthColor);
-	cursor: pointer;
-}
-
 .competition {
-	width: 100%;
-	height: 20rem;
+	position: absolute;
+	top: 60%;
+	left: 5%;
+	width: 40%;
+	height: 20%;
+	text-align: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	animation: lighting 2s infinite;
 }
 
 .start {
@@ -312,7 +210,18 @@ a {
 	color: var(--forthColor);
 }
 
-/* end of main style */
+@keyframes lighting {
+	0% {
+		transform: scale(1);
+	}
+	75% {
+		transform: scale(1.5);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+/* end of header style */
 
 /* footer */
 footer {
