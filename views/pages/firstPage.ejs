@@ -26,19 +26,62 @@
     </head>
 
     <body>
-        <header>
-
+        <header class="banner">
+            <div class="login">
+                <a href="/login">Sign In<i class="fas fa-sign-in-alt"></i></a>
+            </div>
+            <div class="title">
+                <h1 class="name">Pika-Pika</h1>
+                <p class="desc">Collect your Special Pokemon's Collections with Passion</p>
+            </div>
         </header>
+
         <main>
-            first page
+            <section class="info-container">
+                <p class="info">I want to be the very best,
+                    Like no one ever was.
+                    To catch them is my real test,
+                    To train them is my cause!
+                    (I will travel across the land,
+                    Searching far and wide.
+                    Each Pokemon to understand
+                    The power that's inside!)
+                    Pokemon!
+                    Gotta catch em' all!
+                </p>
+            </section>
+            <section class="cards">
+                <h2 class="cards-title">Featured Pokémon</h2>
+                <i class="fas fa-chevron-left left"></i>
+                <div class="slider">
+                    <% pokemons.forEach((pokemon,index)=> { %>
+                        <% if(index===2) {%>
+                            <div class="card active" id=<%=index %> >
+                                <a href=""><img src=<%=pokemon.image %>
+                                    alt=" pokemon" class='img'></a>
+                            </div>
+                            <% } else { %>
+                                <div class="card hold" id=<%=index %> >
+                                    <a href=""> <img src=<%=pokemon.image %>
+                                        alt="pokemon"
+                                        class='img'></a>
+                                </div>
+                                <% } %>
+                                    <% }); %>
+                </div>
+                <i class="fas fa-chevron-right right"></i>
+            </section>
         </main>
 
 
-        <!-- jQuery -->
-        <script src=" https://code.jquery.com/jquery-3.5.1.js"></script>
+        <%- include('./../layout/footer') %>
 
-        <!-- js -->
-        <script src="/js/firstPage.js"></script>
+
+            <!-- jQuery -->
+            <script src=" https://code.jquery.com/jquery-3.5.1.js"></script>
+
+            <!-- js -->
+            <script src="/js/firstPage.js"></script>
     </body>
 
 </html>

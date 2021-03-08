@@ -55,9 +55,22 @@ const firstHandler = (req, res) => {
 					console.log(err);
 				});
 		});
-		res.render('pages/firstPage');
+
+		featuredPokemon(res);
 	});
 };
+
+function featuredPokemon(res) {
+	let sql2 = 'SELECT * FROM pokemons WHERE hp >= $1 ORDER BY hp LIMIT 6;';
+	let value = [generateRandomHp()];
+	client.query(sql2, value).then((results) => {
+		res.render('pages/firstPage', { pokemons: results.rows });
+	});
+}
+
+function generateRandomHp() {
+	return Math.floor(Math.random() * (200 - 50) + 50);
+}
 
 function generateRandomPage() {
 	return Math.floor(Math.random() * 42 + 1);
