@@ -33,21 +33,21 @@
                 <div class="menuItems">
                     <div class="item1" id="item1">
                         <center>
-                            <a href="/home/<%=userId  %> " title="home">
+                            <a href="/home/<%=user.user_id  %> " title="home">
                                 <i class="fas fa-home"></i>
                             </a>
                         </center>
                     </div>
                     <div class="item2" id="item2">
                         <center>
-                            <a href="/dashboard/<%=userId  %>" title="dashboard">
+                            <a href="/dashboard/<%=user.user_id  %>" title="dashboard">
                                 <i class="fas fa-id-card"></i>
                             </a>
                         </center>
                     </div>
                     <div class="item3" id="item3">
                         <center>
-                            <a href="/aboutUs/<%=userId  %>" title="about Us">
+                            <a href="/aboutUs/<%=user.user_id  %>" title="about Us">
                                 <i class="fas fa-info"></i>
                             </a>
                         </center>
@@ -64,9 +64,8 @@
         </header>
         <main>
             <aside class="user1">
-                <!-- <div class="img-container1">
-                    <img src="/images/user1deck.png" alt="card deck">
-                </div> -->
+                <h2 class="computerPoints">1000 points</h2>
+                <h2 class="userName">Computer</h2>
             </aside>
             <div class="main">
                 <section class="computer">
@@ -82,6 +81,10 @@
                     </div>
                 </section>
                 <section class="ring">
+                    <form action="/competition/<%=user.user_id  %>" method="POST" class="win">
+                        <input type="hidden" name="addCard" value="" class="winOrLose">
+                        <input type="submit" value="Go to your dashboard">
+                    </form>
                 </section>
                 <section class="user">
                     <div class="cards">
@@ -97,9 +100,10 @@
                 </section>
             </div>
             <aside class="user2">
-                <!-- <div class="img-container2">
-                    <img src="/images/user2deck.png" alt="card deck">
-                </div> -->
+                <h2 class="userName">
+                    <%=user.username%>
+                </h2>
+                <h2 class="userPoints">1000 points</h2>
             </aside>
         </main>
 
