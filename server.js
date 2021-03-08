@@ -15,6 +15,8 @@ const dashboardHandler = require('./handlers/dashboardHandler');
 const charactersHandler = require('./handlers/charactersHandler');
 const rockPaperHandler = require('./handlers/rockPaperHandler');
 const descriptionHandler = require('./handlers/descriptionHandler');
+const descriptionHome = require('./handlers/descriptionHome');
+
 const competitionHandler = require('./handlers/competitionHandler');
 const dashboardUpdateHandler = require('./handlers/dashboardUpdateHandler');
 
@@ -41,6 +43,7 @@ app.get('/login', (req, res) => {
 app.post('/signUp', signUpHandler);
 app.get('/home/:userId', homeHandler);
 app.get('/dashboard/:userId', dashboardHandler);
+app.get('/description/:pokemonId', descriptionHome);
 app.get('/description/:userId/:pokemonId', descriptionHandler);
 app.get('/characters/:userId', charactersHandler);
 app.get('/rockPaperSissiors/:userId/:trainer', rockPaperHandler);
