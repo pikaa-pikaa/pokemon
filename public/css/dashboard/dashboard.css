@@ -28,7 +28,8 @@ body {
 	width: 100%;
 	display: table;
 	font-family: var(--mainFont);
-	background-color: rgba(58, 86, 156, 0.144);
+	background-color: #d9ecf2;
+	/* background-color: rgba(58, 86, 156, 0.144); */
 }
 
 header {
@@ -116,7 +117,7 @@ a {
 	
 }
 .menuItems > div:hover a {
-	color: red;
+	color: rgb(255, 85, 85);
 }
 
 /* end of header style */
