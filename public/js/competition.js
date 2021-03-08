@@ -28,9 +28,12 @@ $(function () {
 		randomArr.push(random);
 	}
 
+	let cardCount = 0;
+
 	cards.forEach((card, index) => {
 		card.addEventListener('click', function (e) {
 			e.preventDefault();
+			cardCount++;
 			let userFights = document.querySelectorAll('.userFight');
 			let computerFights = document.querySelectorAll('.computerFight');
 
@@ -47,8 +50,48 @@ $(function () {
 			}
 
 			let pokemon = e.currentTarget;
-			pokemon.classList.add('userFight');
 			computerCards[randomArr[index]].classList.add('computerFight');
+			pokemon.classList.add('userFight');
+
+			let computerPoints = document.querySelector('.computerPoints');
+			let userPoints = document.querySelector('.userPoints');
+
+			let userHp = Number(pokemon.firstElementChild.textContent.split(' ')[36]);
+			let computerHp = Number(
+				computerCards[randomArr[index]].lastElementChild.textContent.split(
+					' ',
+				)[36],
+			);
+
+			let remaindComputerPoints = Number(
+				computerPoints.textContent.split(' ')[0],
+			);
+
+			let remaindUserPoints = Number(userPoints.textContent.split(' ')[0]);
+
+			if (userHp > computerHp) {
+				computerPoints.textContent = `${
+					remaindComputerPoints - (userHp - computerHp)
+				} points`;
+			} else {
+				userPoints.textContent = `${
+					remaindUserPoints - (computerHp - userHp)
+				} points`;
+			}
+
+			let winOrLose = document.querySelector('.winOrLose');
+
+			console.log(winOrLose.value);
+
+			if (cardCount === 20) {
+				if (remaindComputerPoints > remaindUserPoints) {
+					winOrLose.value = 'lose';
+				} else if (remaindComputerPoints < remaindUserPoints) {
+					winOrLose.value = 'win';
+				} else {
+					winOrLose.value = 'draw';
+				}
+			}
 		});
 	});
 
@@ -75,4 +118,3 @@ function pop() {
 function generateRandomIndex() {
 	return Math.floor(Math.random() * 20);
 }
-

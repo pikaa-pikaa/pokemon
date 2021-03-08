@@ -16,6 +16,8 @@ const charactersHandler = require('./handlers/charactersHandler');
 const rockPaperHandler = require('./handlers/rockPaperHandler');
 const descriptionHandler = require('./handlers/descriptionHandler');
 const competitionHandler = require('./handlers/competitionHandler');
+const dashboardUpdateHandler = require('./handlers/dashboardUpdateHandler');
+
 const loginHandler = require('./handlers/loginHandler');
 const signUpHandler = require('./handlers/signUpHandler');
 const firstHandler = require('./handlers/firstHandler');
@@ -40,6 +42,8 @@ app.get('/description/:userId/:pokemonId', descriptionHandler);
 app.get('/characters/:userId', charactersHandler);
 app.get('/rockPaperSissiors/:userId/:trainer', rockPaperHandler);
 app.get('/competition/:userId', competitionHandler);
+app.post('/competition/:userId', dashboardUpdateHandler);
+
 app.get('/aboutUs/:userId', (req, res) => {
 	let userId = req.params.userId;
 	res.render('pages/aboutUs', { userId });
