@@ -14,9 +14,9 @@
 }
 
 body {
-    background-image: url('./../../images/back.jpg');
+    /* background-image: url('./../../images/back.jpg'); */
 	background-repeat: no-repeat;
-	background-size: cover;
+   	background-size: cover;
     background-position: center;
     display: flex;
 	justify-content: center;
@@ -25,14 +25,16 @@ body {
 	background-size: 100%;
 	margin: 60px  10px;
 	color: var(--forthColor);
+	background-color: #b4cfe2;
+
+	/* background-color: steelblue; */
+
 	
 }
 .front{
 	position: absolute;
     bottom: -8%;
 	z-index: 3;
-	
-	
 }
 
 .top{
@@ -41,8 +43,6 @@ body {
 	width: 230px;
 	height: 100px;
 	z-index: 3;
-
-
 }
 
 h1 {
@@ -74,18 +74,21 @@ a {
 }
 
 button:hover{
-	color: seashell;
+	color: rgb(39, 61, 131);
+	font-weight: 700;
 	/* background-color: blue; */
 }
 
 button {
 	border-radius: 20px;
-	border: solid 2px  #0e0d0d;
+	/* border: solid 2px  #ff0000; */
 	cursor: pointer;
-	background-color: #9c9292;
+	background-color: yellow;
 	font-size: 12px;
 	font-weight:700 ;
+	border: solid 2px  blue;
 
+	/* box-shadow: 0px 0px 3px 3px  royalblue; */
 	padding: 12px 45px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
@@ -101,13 +104,15 @@ button:focus {
 }
 
 button.ghost {
-	background-color: #9c9292;
-	border: solid 2px  #0e0d0d;
+	background-color: yellow;
+	border: solid 2px  blue;
 	cursor: pointer;
 }
 
 form {
-	background: linear-gradient(90deg, rgba(54,22,22,0.5830707282913166) 0%, rgba(244,13,13,1) 17%, rgba(238,238,18,1) 84%);
+	
+background:#f4d160;
+	/* background: #ffce7a; */
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -134,9 +139,9 @@ input {
 	height: 415px;
 	margin: auto;
 	/* opacity: .9; */
-	border: solid 4px gray;
+	border: solid 4px blue;
 	border-radius: 20px 5px;
-	box-shadow: 0px 0px 5px 5px  rgb(20, 20, 20);
+	box-shadow: 0px 0px 3px 3px  royalblue;
 	z-index: 0;
 	
 	
@@ -202,7 +207,7 @@ input {
 }
 
 .overlay {
-	background: linear-gradient(95deg, rgba(247,30,30,1) 0%, rgba(8,7,7,1) 35%, rgba(244,13,13,1) 100%);
+background:#7182af;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;

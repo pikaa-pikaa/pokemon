@@ -28,7 +28,8 @@ body {
 	width: 100%;
 	display: table;
 	font-family: var(--mainFont);
-	background-color: rgba(58, 86, 156, 0.144);
+	background-color: #b4cfe2;
+	/* background-color: rgba(58, 86, 156, 0.144); */
 }
 
 header {
@@ -48,6 +49,8 @@ footer {
 
 a {
 	text-decoration: none;
+	/* background-color: blue;
+	border-radius: 80%; */
 }
 
 ul {
@@ -116,7 +119,7 @@ a {
 	
 }
 .menuItems > div:hover a {
-	color: red;
+	color: rgb(255, 85, 85);
 }
 
 /* end of header style */
@@ -128,6 +131,15 @@ main {
 	align-items: center;
 	justify-content: space-around;
 }
+
+/* Title style */
+
+.hello{
+	position: absolute;
+	top: 9%;
+	left: 45%;
+}
+/* end of Title style */
 
 /* cards */
 
@@ -142,8 +154,8 @@ main {
 	margin-top: 10rem;
 	width: 70rem;
     border: 3px solid  transparent;
-    padding: 15px;
-	border: 0.5rem outset  var(--secondColor);
+    padding: 25px;
+	/* border: 0.5rem outset  var(--secondColor); */
 	/* border-image: url(/images/closeBall.png) 30 round ;
 	border-image-slice: 10%; */
 }
@@ -156,13 +168,13 @@ main {
 	transition: var(--mainTransition);
 	margin: 0.5rem ;
 	padding: -.5rem;	
-	box-shadow: 0 0 15px 10px ;
+	box-shadow: 0 0 5px 5px ;
 	margin-top: 2rem;
 }
 .card:hover{
    transition: transform .5s;
    transform: scale(1.25);
-   box-shadow: 0 0 10px 10px  rgb(255, 49, 49) ;
+   box-shadow: 0 0 5px 5px  rgb(255, 255, 125) ;
 }
 
 .card a img {
