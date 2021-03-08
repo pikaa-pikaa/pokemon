@@ -10,10 +10,9 @@ const loginHandler = (req, res) => {
 		if (results.rows.length) {
 			res.redirect(`/home/${results.rows[0].user_id}`);
 		} else {
-			res.send('Incorrect Username and/or Password!');
+			res.redirect('/login');
 		}
 	});
 };
-
 
 module.exports = loginHandler;
