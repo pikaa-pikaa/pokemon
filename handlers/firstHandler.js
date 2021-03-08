@@ -55,7 +55,7 @@ const firstHandler = (req, res) => {
 					console.log(err);
 				});
 		});
-		res.render('pages/login');
+		res.render('pages/firstPage');
 	});
 };
 

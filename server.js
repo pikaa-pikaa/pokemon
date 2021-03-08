@@ -35,6 +35,9 @@ app.set('view engine', 'ejs');
 //routes
 app.get('/', firstHandler);
 app.post('/login', loginHandler);
+app.get('/login', (req, res) => {
+	res.render('pages/login');
+});
 app.post('/signUp', signUpHandler);
 app.get('/home/:userId', homeHandler);
 app.get('/dashboard/:userId', dashboardHandler);

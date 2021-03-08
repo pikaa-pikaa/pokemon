@@ -19,6 +19,7 @@ $(function () {
 	//card
 	let cards = document.querySelectorAll('.cards .card');
 	let computerCards = document.querySelectorAll('.computerCards .computerCard');
+
 	let randomArr = [];
 	let random = generateRandomIndex();
 	for (let index = 0; index < 20; index++) {
@@ -34,6 +35,7 @@ $(function () {
 		card.addEventListener('click', function (e) {
 			e.preventDefault();
 			cardCount++;
+
 			let userFights = document.querySelectorAll('.userFight');
 			let computerFights = document.querySelectorAll('.computerFight');
 
@@ -83,7 +85,7 @@ $(function () {
 
 			console.log(winOrLose.value);
 
-			if (cardCount === 20) {
+			if (cardCount === 10) {
 				if (remaindComputerPoints > remaindUserPoints) {
 					winOrLose.value = 'lose';
 				} else if (remaindComputerPoints < remaindUserPoints) {
