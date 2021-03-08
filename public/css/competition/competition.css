@@ -219,7 +219,8 @@ main {
 }
 
 .card,
-.computerCard {
+.computerCard,
+.computerCardNot {
 	flex: 0 0 calc(17% - 2rem);
 	height: 95%;
 	display: flex;
@@ -235,7 +236,8 @@ main {
 }
 
 .card img,
-.computerCard img {
+.computerCard img,
+.computerCardNot img {
 	width: 100%;
 	height: 85%;
 	flex: 0 0 calc(85% - 1rem);
