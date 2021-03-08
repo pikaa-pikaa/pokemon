@@ -99,7 +99,7 @@ ul {
 	top: 3px;
 }
 a {
-	color: red;
+	color: royalblue;
 }
 .item2 {
 	bottom: 80px;
@@ -112,10 +112,11 @@ a {
 }
 
 .menuItems > div:hover {
-	background-color: red;
+	background-color: blue;
+	
 }
 .menuItems > div:hover a {
-	color: white;
+	color: red;
 }
 
 /* end of header style */
@@ -138,21 +139,36 @@ main {
 	flex-wrap: wrap;
 	position: relative;
 	transition: var(--mainTransition);
-	margin-top: 12rem;
+	margin-top: 10rem;
+	width: 70rem;
+    border: 3px solid  transparent;
+    padding: 15px;
+	border: 0.5rem outset  var(--secondColor);
+	/* border-image: url(/images/closeBall.png) 30 round ;
+	border-image-slice: 10%; */
 }
 
 .card {
-	flex: 0 0 calc(27% - 4rem);
+	flex: 0 0 calc(27% - 5rem);
 	width: 60%;
 	height: 60%;
 	border-radius: 1rem;
 	transition: var(--mainTransition);
-	margin: 0.5rem;
+	margin: 0.5rem ;
+	padding: -.5rem;	
+	box-shadow: 0 0 15px 10px ;
+	margin-top: 2rem;
+}
+.card:hover{
+   transition: transform .5s;
+   transform: scale(1.25);
+   box-shadow: 0 0 10px 10px  rgb(255, 49, 49) ;
 }
 
 .card a img {
-	width: 80%;
-	height: 100%;
+	width: 100%;
+	height: 80%;
+	border-radius: 1rem;
 }
 
 /* end of cards */
