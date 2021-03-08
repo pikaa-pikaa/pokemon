@@ -1,86 +1,86 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pokémon</title>
 
-  <!-- favicon -->
-  <link rel="shortcut icon" href="https://www.pngkey.com/png/detail/317-3178288_pokemon-go-icon-png.png"
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="https://www.pngkey.com/png/detail/317-3178288_pokemon-go-icon-png.png"
       type="image/x-icon">
 
-  <!-- font awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
       integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
       crossorigin="anonymous" />
 
-  <!-- google font -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/login/login.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/login/login.css">
+  </head>
 
-  <img src="../../images/pokemonTitle.png" class="top"> 
+  <body>
+    <main>
+      <div class="container" id="container">
+        <img src="../../images/pokemonTitle.png" class="top">
 
-  <div class="container" id="container">
-    <div class="form-container sign-up-container">
-      <form action="/signUp" method="POST">
-        <h1>Create Account</h1>
-       
-        <input type="text" name='username' id="username" placeholder="username" required>
-        <input type="password" name='password' id='password' placeholder="password" required>
-        
-        <button>Sign Up</button>
-      </form>
-    </div>
-    <div class="form-container sign-in-container">
-      <form action="/login" method="POST">
-        <h1>Sign in</h1>
-        
-        <input type="text" name='username' id="username" placeholder="username" required>
-        <input type="password" name='password' id='password' placeholder="password" required>
-        <a href="#">Forgot your password?</a>
-        <button type="submit">Sign In</button>
-      </form>
-    </div>
-    <div class="overlay-container">
-      <div class="overlay">
-        <div class="overlay-panel overlay-left">
-          <h1>Welcome Back!</h1>
-          <br>
-          <p>To keep connected with us please login with your personal info</p>
-          <button class="ghost" id="signIn">Sign In</button>
+        <div class="form-container sign-up-container">
+          <form action="/signUp" method="POST">
+            <h1>Create Account</h1>
+
+            <input type="text" name='username' id="username" placeholder="username" required>
+            <input type="password" name='password' id='password' placeholder="password" required>
+
+            <button>Sign Up</button>
+          </form>
         </div>
-        <div class="overlay-panel overlay-right">
-          <h1>Hello, Friend!</h1>
-          <br>
-          <p>Enter your personal details and start playing with us</p>
-          <br>
-          <button class="ghost" id="signUp">Sign Up</button>
+        <div class="form-container sign-in-container">
+          <form action="/login" method="POST">
+            <h1>Sign in</h1>
+
+            <input type="text" name='username' id="username" placeholder="username" required>
+            <input type="password" name='password' id='password' placeholder="password" required>
+            <a href="#">Forgot your password?</a>
+            <button type="submit">Sign In</button>
+          </form>
         </div>
+        <div class="overlay-container">
+          <div class="overlay">
+            <div class="overlay-panel overlay-left">
+              <h1>Welcome Back!</h1>
+              <br>
+              <p>To keep connected with us please login with your personal info</p>
+              <button class="ghost" id="signIn">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+              <h1>Hello, Friend!</h1>
+              <br>
+              <p>Enter your personal details and start playing with us</p>
+              <br>
+              <button class="ghost" id="signUp">Sign Up</button>
+            </div>
+          </div>
+        </div>
+        <img src="../../images/front2.png" class="front">
+
       </div>
-    </div>
+      <a href="/" class="returnLink">
+        <div class="return">
+          <i class="fas fa-arrow-circle-left"></i>
+          <h4>Home Page</h4>
+        </div>
+      </a>
+    </main>
 
-  </div>
-          <img src="../../images/front.png" class="front"> 
+    <!-- jQuery -->
+    <script src=" https://code.jquery.com/jquery-3.5.1.js"></script>
 
-    <!-- <%- include('./../layout/footer') %> -->
+    <!-- js -->
+    <script src="js/login.js"></script>
+  </body>
 
-
-
-
-   <!-- jQuery -->
-   <script src=" https://code.jquery.com/jquery-3.5.1.js"></script>
-
-   <!-- js -->
-   <script src="js/login.js"></script>
-  
- 
-
-
-
-</body>
 </html>
