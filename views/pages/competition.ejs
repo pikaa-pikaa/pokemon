@@ -64,15 +64,15 @@
         </header>
         <main>
             <aside class="user1">
-                <div class="img-container1">
+                <!-- <div class="img-container1">
                     <img src="/images/user1deck.png" alt="card deck">
-                </div>
+                </div> -->
             </aside>
             <div class="main">
                 <section class="computer">
                     <div class="computerCards">
-                        <% for (let index=0; index < 5; index++) { %>
-                            <div class="computerCard" data-id="<%=computerCards[index].pokemon_id %>">
+                        <% for (let index=0; index < 20; index++) { %>
+                            <div class="computerCard">
                                 <img src="<%=computerCards[index].image %>" alt="card">
                                 <p>
                                     <%=computerCards[index].hp %> HP
@@ -85,8 +85,8 @@
                 </section>
                 <section class="user">
                     <div class="cards">
-                        <% for (let index=0; index < 5; index++) { %>
-                            <div class="card" data-id="<%=userCards[index].pokemon_id %>">
+                        <% for (let index=0; index < 20; index++) { %>
+                            <div class="card">
                                 <p>
                                     <%=userCards[index].hp %> HP
                                 </p>
@@ -97,9 +97,9 @@
                 </section>
             </div>
             <aside class="user2">
-                <div class="img-container2">
+                <!-- <div class="img-container2">
                     <img src="/images/user2deck.png" alt="card deck">
-                </div>
+                </div> -->
             </aside>
         </main>
 

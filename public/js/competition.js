@@ -17,11 +17,11 @@ $(function () {
 	//end navbar
 
 	//card
-	let cards = document.querySelectorAll('.card');
-	let computerCards = document.querySelectorAll('.computerCard');
+	let cards = document.querySelectorAll('.cards .card');
+	let computerCards = document.querySelectorAll('.computerCards .computerCard');
 	let randomArr = [];
 	let random = generateRandomIndex();
-	for (let index = 0; index < 5; index++) {
+	for (let index = 0; index < 20; index++) {
 		while (randomArr.includes(random)) {
 			random = generateRandomIndex();
 		}
@@ -73,5 +73,6 @@ function pop() {
 }
 
 function generateRandomIndex() {
-	return Math.floor(Math.random() * 5);
+	return Math.floor(Math.random() * 20);
 }
+
