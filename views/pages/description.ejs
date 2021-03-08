@@ -1,63 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokémon</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pokémon</title>
 
-    <!-- favicon -->
-    <link rel="shortcut icon" href="https://www.pngkey.com/png/detail/317-3178288_pokemon-go-icon-png.png"
-        type="image/x-icon">
+        <!-- favicon -->
+        <link rel="shortcut icon" href="https://www.pngkey.com/png/detail/317-3178288_pokemon-go-icon-png.png"
+            type="image/x-icon">
 
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-        crossorigin="anonymous" />
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+            integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+            crossorigin="anonymous" />
 
-    <!-- google font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
 
-    <!-- style -->
-    <link rel="stylesheet" href="/css/description/description.css">
+        <!-- style -->
+        <link rel="stylesheet" href="/css/description/description.css">
 
-</head>
+    </head>
 
-<body>
-    <header>
-        <div>
-            <img class="menu navBarsClose" onclick="pop()" src="/images/closeBall.png" alt="Pokemon Ball">
-            <img class="menu navBarsOpen hide" onclick="pop()" src="/images/openBall.png" alt="Pokemon Ball">
-            <div class="menuItems">
-                <div class="item1" id="item1">
-                    <center>
-                        <a href="/home/<%= userId %> " title='home'>
-                            <i class="fas fa-home"></i>
-                        </a>
-                    </center>
-                </div>
-                <div class="item2" id="item2">
-                    <center>
-                        <a href="/characters/<%= userId %>" title='competition'>
-                            <i class="fas fa-gamepad"></i>
-                        </a>
-                    </center>
-                </div>
-                <div class="item3" id="item3">
-                    <center>
-                        <a href="/dashboard/<%= userId %>" title='dashboard'>
-                            <i class="fas fa-id-card"></i>
-                        </a>
-                    </center>
-                </div>
-                <div class="item4" id="item4" title='logout'>
-                    <center>
-                        <a href="/">
-                            <i class="fas fa-sign-out-alt"></i>
-                        </a>
-                    </center>
+    <body>
+        <header>
+            <div>
+                <img class="menu navBarsClose" onclick="pop()" src="/images/closeBall.png" alt="Pokemon Ball">
+                <img class="menu navBarsOpen hide" onclick="pop()" src="/images/openBall.png" alt="Pokemon Ball">
+                <div class="menuItems">
+                    <div class="item1" id="item1">
+                        <center>
+                            <a href="/home/<%= userId %> " title='home'>
+                                <i class="fas fa-home"></i>
+                            </a>
+                        </center>
+                    </div>
+                    <div class="item2" id="item2">
+                        <center>
+                            <a href="/characters/<%= userId %>" title='competition'>
+                                <i class="fas fa-gamepad"></i>
+                            </a>
+                        </center>
+                    </div>
+                    <div class="item3" id="item3">
+                        <center>
+                            <a href="/dashboard/<%= userId %>" title='dashboard'>
+                                <i class="fas fa-id-card"></i>
+                            </a>
+                        </center>
+                    </div>
+                    <div class="item4" id="item4" title='logout'>
+                        <center>
+                            <a href="/login">
+                                <i class="fas fa-sign-out-alt"></i>
+                            </a>
+                        </center>
+                    </div>
                 </div>
             </div>
         </div>

@@ -12,7 +12,7 @@ const signUpHandler = (req, res) => {
 				res.send('Password must be a least 5 characters long');
 			} else {
 				addedPokemonForUser(results.rows[0].user_id);
-				res.redirect('/');
+				res.redirect('/login');
 			}
 		}
 	});
