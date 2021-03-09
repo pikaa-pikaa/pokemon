@@ -62,49 +62,49 @@ ul {
 /* header style */
 header {
 	height: 100vh;
-	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
 		url('./../../images/homebackground.jpg') center/cover no-repeat scroll;
 	position: relative;
 }
 
 .login {
 	position: absolute;
-	top: 7%;
-	left: 92%;
+	top: 55%;
+	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 12%;
-	background-color: var(--forthColor);
-	border: 2px solid var(--forthColor);
-	padding: 0.5rem 1.5rem;
+	width: 20%;
+	background-color: var(--mainColor);
+	border: 2px solid var(--mainColor);
+	padding: 1rem 1.5rem;
 	border-radius: 1rem;
 	transition: var(--mainTransition);
 }
 
 .login a {
-	color: var(--mainColor);
+	color: var(--forthColor);
 	letter-spacing: 0.15rem;
-	font-size: 1.5rem;
+	font-size: 2rem;
 	width: 100%;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	transition: var(--mainTransition);
 }
 
 .login:hover {
-	background-color: inherit;
+	background-color: var(--forthColor);
 }
 
 .login:hover a {
-	color: var(--forthColor);
+	color: var(--mainColor);
 }
 
 .title {
 	position: absolute;
-	top: 50%;
+	top: 35%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 70%;
+	width: 80%;
 	color: var(--forthColor);
 	text-align: center;
 	display: flex;
@@ -115,13 +115,13 @@ header {
 
 .name {
 	margin-bottom: 2rem;
-	font-size: 4rem;
+	font-size: 5rem;
 	transition: var(--mainTransition);
 	opacity: 0;
 }
 
 .desc {
-	font-size: 2rem;
+	font-size: 3rem;
 	transition: var(--mainTransition);
 	opacity: 0;
 }
