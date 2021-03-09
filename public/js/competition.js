@@ -17,8 +17,19 @@ $(function () {
 	//end navbar
 
 	//card
+	$('.cardimg').mouseenter(function () {
+		let src = $(this).attr('src');
+		$('.imgHover').removeClass('hide');
+		$('.imgHover').attr('src', src);
+	});
+
+	$('.cardimg').mouseleave(function () {
+		$('.imgHover').addClass('hide');
+	});
+
 	let cards = document.querySelectorAll('.cards .card');
 	let computerCards = document.querySelectorAll('.computerCards .computerCard');
+
 	let randomArr = [];
 	let random = generateRandomIndex();
 	for (let index = 0; index < 20; index++) {
@@ -28,9 +39,13 @@ $(function () {
 		randomArr.push(random);
 	}
 
+	let cardCount = 0;
+
 	cards.forEach((card, index) => {
 		card.addEventListener('click', function (e) {
 			e.preventDefault();
+			cardCount++;
+
 			let userFights = document.querySelectorAll('.userFight');
 			let computerFights = document.querySelectorAll('.computerFight');
 
@@ -47,8 +62,58 @@ $(function () {
 			}
 
 			let pokemon = e.currentTarget;
-			pokemon.classList.add('userFight');
 			computerCards[randomArr[index]].classList.add('computerFight');
+			pokemon.classList.add('userFight');
+
+			let computerPoints = document.querySelector('.computerPoints');
+			let userPoints = document.querySelector('.userPoints');
+
+			let userHp = Number(pokemon.firstElementChild.textContent.split(' ')[36]);
+			let computerHp = Number(
+				computerCards[randomArr[index]].lastElementChild.textContent.split(
+					' ',
+				)[36],
+			);
+
+			let remaindComputerPoints = Number(
+				computerPoints.textContent.split(' ')[0],
+			);
+
+			let remaindUserPoints = Number(userPoints.textContent.split(' ')[0]);
+
+			if (userHp > computerHp) {
+				computerPoints.textContent = `${
+					remaindComputerPoints - (userHp - computerHp)
+				} points`;
+			} else {
+				userPoints.textContent = `${
+					remaindUserPoints - (computerHp - userHp)
+				} points`;
+			}
+
+			let winOrLose = document.querySelector('.winOrLose');
+			let winLose = document.querySelector('.winLose');
+			let winLoseImg = document.querySelector('.winLoseImg');
+			let winLoseTitle = document.querySelector('.winLoseTitle');
+
+			if (cardCount === 20) {
+				if (remaindComputerPoints > remaindUserPoints) {
+					winOrLose.value = 'lose';
+					winLose.style.opacity = 1;
+					winLoseImg.setAttribute('src', './../images/lose.png');
+					winLoseTitle.textContent = 'YOU LOST';
+				} else if (remaindComputerPoints < remaindUserPoints) {
+					winOrLose.value = 'win';
+					winLose.style.opacity = 1;
+					winLoseImg.setAttribute('src', './../images/win.png');
+					winLoseTitle.textContent = 'YOU WON!!';
+				} else {
+					winOrLose.value = 'draw';
+					winLose.style.opacity = 1;
+					winLoseImg.setAttribute('src', './../images/draw.png');
+					winLoseTitle.textContent = 'DRAW';
+				}
+			}
 		});
 	});
 
@@ -58,10 +123,10 @@ $(function () {
 let i = 0;
 function pop() {
 	if (i == 0) {
-		$('#item1').css('transform', 'translate(-130px,-13px)');
+		$('#item1').css('transform', 'translate(-130px,-16px)');
 		$('#item2').css('transform', 'translate(-122px,71px)');
-		$('#item3').css('transform', 'translate(-72px,142px)');
-		$('#item4').css('transform', 'translate( 15px,155px)');
+		$('#item3').css('transform', 'translate(-65px,135px)');
+		$('#item4').css('transform', 'translate( 16px,155px)');
 		i = 1;
 	} else {
 		$('#item1').css('transform', 'translate(0)');
@@ -75,4 +140,3 @@ function pop() {
 function generateRandomIndex() {
 	return Math.floor(Math.random() * 20);
 }
-

@@ -8,7 +8,7 @@
 
 :root {
 	--mainTransition: all 0.5s ease-in-out;
-	--mainFont: 'DotGothic16', sans-serif;
+	--mainFont: 'Yanone Kaffeesatz', sans-serif;
 	--mainColor: rgb(149, 0, 0);
 	--secondColor: rgb(0, 72, 141);
 	--thirdColor: rgb(240, 207, 0);
@@ -28,7 +28,8 @@ body {
 	width: 100%;
 	display: table;
 	font-family: var(--mainFont);
-	background-color: rgba(58, 86, 156, 0.144);
+	background: url('./../../images/background.jpg') center/cover no-repeat scroll;
+	font-size: 1.2rem;
 }
 
 header {
@@ -58,8 +59,8 @@ ul {
 /* header style */
 
 .menu {
-	width: 85px;
-	height: 85px;
+	width: 88px;
+	height: 88px;
 	border-radius: 50%;
 	position: fixed;
 	margin: auto;
@@ -90,21 +91,35 @@ ul {
 	font-size: 40px;
 	transition: 0.5s linear;
 }
-.fas {
-	position: relative;
-	top: 3px;
-}
+
 a {
 	color: red;
 }
+
+.item1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .item2 {
 	bottom: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .item3 {
 	bottom: 160px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
+
 .item4 {
-	bottom: 230px;
+	bottom: 235px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .menuItems > div:hover {
@@ -125,86 +140,125 @@ main {
 }
 
 .main {
-	flex: 0 0 calc(50% - 5rem);
+	flex: 0 0 calc(60% - 5rem);
+	width: 30rem;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
 	position: relative;
+	background: url('./../../images/ring3.jpg') center/cover no-repeat scroll;
+	border-radius: 3rem;
+	box-shadow: 1px 3px 75px 9px rgba(176, 170, 170, 0.75);
 }
 
 .user {
 	flex: 0 0 calc(25% - 2rem);
-	width: 100%;
+	width: 80%;
 	height: 25%;
+	margin: 0 auto;
 }
 
 .computer {
 	flex: 0 0 calc(25% - 2rem);
-	width: 100%;
+	width: 80%;
 	height: 25%;
+	margin: 0 auto;
 }
 
 .ring {
 	flex: 0 0 50%;
-	width: 100%;
+	min-width: 100%;
 	height: 50%;
-	border: 1px solid green;
-	background: url('./../../images/ring.jpg') center/cover no-repeat scroll;
+}
+
+.points {
+	flex: 0 0 calc(18% - 2rem);
+	max-width: 20rem;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 0;
+	margin-left: 2rem;
+}
+
+.points2 {
+	flex: 0 0 calc(18% - 2rem);
+	max-width: 20rem;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 3rem 0;
+	margin-right: 2rem;
 }
 
 .user1 {
 	flex: 0 0 calc(18% - 2rem);
-	max-width: 20rem;
-	height: 100%;
-	border: 1px solid blue;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: center;
+	padding-top: 1rem;
+	background-color: var(--mainColor);
+	border-radius: 1rem;
+	border: 2px solid var(--thirdColor);
 }
 
 .user2 {
 	flex: 0 0 calc(18% - 2rem);
-	max-width: 20rem;
-	height: 100%;
-	border: 1px solid blue;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
+	justify-content: center;
 	align-items: center;
+	padding-bottom: 1rem;
+	background-color: var(--mainColor);
+	border-radius: 1rem;
+	border: 2px solid var(--thirdColor);
 }
 
-/* .img-container1 {
-	width: 10rem;
-	height: 15rem;
-	overflow: hidden;
-	margin-top: 3rem;
-	cursor: pointer;
-}
-
-.img-container2 {
-	width: 10rem;
-	height: 15rem;
-	overflow: hidden;
-	margin-bottom: 3rem;
-	cursor: pointer;
-	z-index: 5;
-}
-
-.img-container1 img,
-.img-container2 img {
+.userName {
 	width: 100%;
-	height: 100%;
-} */
+	text-align: center;
+	letter-spacing: 0.15rem;
+	margin: 1rem 0;
+	background-color: var(--mainColor);
+	color: var(--forthColor);
+	padding: 0.5rem 0;
+}
+
+.computerPoints {
+	width: 70%;
+	text-align: center;
+	letter-spacing: 0.15rem;
+	background-color: var(--secondColor);
+	color: var(--thirdColor);
+	padding: 0.5rem 0;
+	border-radius: 1rem;
+}
+
+.userPoints {
+	width: 70%;
+	text-align: center;
+	letter-spacing: 0.15rem;
+	background-color: var(--secondColor);
+	color: var(--thirdColor);
+	padding: 0.5rem 0;
+	border-radius: 1rem;
+}
 
 .cards,
 .computerCards {
 	width: 100%;
 	height: 100%;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	align-items: center;
 	overflow: hidden;
 }
@@ -215,10 +269,11 @@ main {
 	height: 95%;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	align-items: center;
 	transition: var(--mainTransition);
 	margin: 0 1rem;
+	cursor: pointer;
 }
 
 .card {
@@ -236,6 +291,16 @@ main {
 	transform: rotate(180deg);
 }
 
+.hover {
+	width: 100%;
+	height: 50%;
+}
+
+.imgHover {
+	width: 100%;
+	height: 100%;
+}
+
 .card p,
 .computerCard p {
 	flex: 0 0 calc(10% - 1rem);
@@ -244,27 +309,70 @@ main {
 	background-color: var(--secondColor);
 	color: var(--thirdColor);
 	border-radius: 0.5rem;
-	font-size: 0.8rem;
+	font-size: 0.9rem;
 }
 
 .userFight {
 	position: absolute;
 	top: 65%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-62%, -50%);
 	width: 12%;
 	height: 20%;
-	transition: var(--mainTransition);
 }
 
 .computerFight {
 	position: absolute;
 	top: 35%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-62%, -50%);
 	width: 12%;
 	height: 20%;
-	transition: var(--mainTransition);
+}
+
+.winLose {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 60%;
+	height: 60%;
+	border: 3px solid var(--thirdColor);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: var(--secondColor);
+	border-radius: 1.5rem;
+	z-index: 5;
+	opacity: 0;
+	transition: all 2s ease-in-out;
+}
+
+.winLoseImg {
+	flex: 0 0 calc(50% - 1rem);
+	width: 40%;
+	height: 30%;
+}
+
+.winLoseTitle {
+	flex: 0 0 calc(25% - 2rem);
+	width: 80%;
+	font-size: 2.5rem;
+	text-align: center;
+	color: var(--thirdColor);
+	letter-spacing: 0.2rem;
+}
+
+.winLoseBtn {
+	flex: 0 0 calc(25% - 2rem);
+	width: 50%;
+	font-size: 1.2rem;
+	cursor: pointer;
+	border: none;
+	background-color: var(--thirdColor);
+	color: var(--secondColor);
+	border-radius: 1rem;
 }
 
 .hide {

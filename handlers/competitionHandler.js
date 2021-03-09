@@ -3,51 +3,58 @@ const client = require('./../data/database');
 const competitionHandler = async (req, res) => {
 	let userId = req.params.userId;
 
+	let userCards;
+	let computerCards;
+
+	let userSql = `SELECT * FROM users WHERE user_id = ${userId};`;
+
+	let user = await client.query(userSql);
+
 	let sqlComputer = `SELECT * FROM pokemons OFFSET ${generateRandomRow()} ROWS FETCH FIRST 20 ROW ONLY;`;
 
-	let userCards = [];
-	let computerCards = [];
-
-	for (let index = 0; index < 20; index++) {
-		let sqlUser = `SELECT * FROM pokemons
+	let sqlUser = `SELECT * FROM pokemons
 					INNER JOIN pokemons_users ON pokemons_users.pokemon_id = pokemons.pokemon_id
 					INNER JOIN users ON users.user_id = pokemons_users.user_id
-					WHERE users.user_id=${userId};`;
+					WHERE users.user_id=${userId} ORDER BY pokemons.hp DESC LIMIT 20;`;
 
-		let cards = await client.query(sqlUser);
-		if (cards.rows.length > 20) {
-			let offset = generateRandomUserCards(cards.rows.length);
-
-			while (card.rows.length - offset < 20) {
-				offset = generateRandomUserCards(cards.rows.length);
-			}
-
-			let sqlUser = `SELECT * FROM pokemons
-					INNER JOIN pokemons_users ON pokemons_users.pokemon_id = pokemons.pokemon_id
-					INNER JOIN users ON users.user_id = pokemons_users.user_id
-					WHERE users.user_id=${userId} OFFSET ${generateRandomUserCards()} ROWS FETCH FIRST 20 ROW ONLY;`;
-
-			let cards2 = await client.query(sqlUser);
-			userCards.push(cards2.rows[index]);
-		} else {
-			userCards.push(cards.rows[index]);
-		}
-	}
+	userCards = await client.query(sqlUser);
 
 	client.query(sqlComputer).then((results) => {
-		computerCards = [...results.rows];
-		res.render('pages/competition', { userId, computerCards, userCards });
-	});
+		if (results.rows.length === 0) {
+			let offset = generateRandomRow();
 
-	// res.render('pages/competition', { userId, computerCards, userCards });
+			while (results.rows.length === 0) {
+				offset = generateRandomRow();
+			}
+
+			// let sqlUser = `SELECT * FROM pokemons
+			// 	INNER JOIN pokemons_users ON pokemons_users.pokemon_id = pokemons.pokemon_id
+			// 	INNER JOIN users ON users.user_id = pokemons_users.user_id
+			// 	WHERE users.user_id=${userId} OFFSET ${offset} ROWS FETCH FIRST 20 ROW ONLY;`;
+
+			let sqlComputer = `SELECT * FROM pokemons OFFSET ${offset} ROWS FETCH FIRST 20 ROW ONLY;`;
+
+			client.query(sqlComputer).then((results) => {
+				res.render('pages/competition', {
+					user: user.rows[0],
+					computerCards: results.rows,
+					userCards: userCards.rows,
+				});
+			});
+		} else {
+			client.query(sqlComputer).then((results) => {
+				res.render('pages/competition', {
+					user: user.rows[0],
+					computerCards: results.rows,
+					userCards: userCards.rows,
+				});
+			});
+		}
+	});
 };
 
 function generateRandomRow() {
-	return Math.floor(Math.random() * 700 + 1);
-}
-
-function generateRandomUserCards(max) {
-	return Math.floor(Math.random() * max + 1);
+	return Math.floor(Math.random() * 200 + 1);
 }
 
 module.exports = competitionHandler;

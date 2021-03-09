@@ -1,124 +1,124 @@
-@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
 /* font-family: 'Cairo', sans-serif; */
 /* global style*/
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 :root {
-  --mainTransition: all 0.3s ease-in-out;
-  --mainFont: "arial";
-  --mainColor: rgb(149, 0, 0);
-  --secondColor: rgb(0, 72, 141);
-  --thirdColor: rgb(240, 207, 0);
-  --forthColor: white;
-  --fifthColor: rgb(58, 85, 156);
-  --darkColor: black;
+	--mainTransition: all 0.3s ease-in-out;
+	--mainFont: 'arial';
+	--mainColor: rgb(149, 0, 0);
+	--secondColor: rgb(0, 72, 141);
+	--thirdColor: rgb(240, 207, 0);
+	--forthColor: white;
+	--fifthColor: rgb(58, 85, 156);
+	--darkColor: black;
 }
 
 html {
-  scroll-behavior: smooth;
-  height: 100%;
-  width: 100%;
+	scroll-behavior: smooth;
+	height: 100%;
+	width: 100%;
 }
 
 body {
-  height: 100%;
-  width: 100%;
-  display: table;
-  font-family: var(--mainFont);
-  background-color: rgba(58, 86, 156, 0.144);
+	height: 100%;
+	width: 100%;
+	display: table;
+	font-family: var(--mainFont);
+	background-color: rgba(58, 86, 156, 0.144);
 }
 
 header {
-  display: table-row;
-  width: 100%;
+	display: table-row;
+	width: 100%;
 }
 
 main {
-  display: table-row;
-  width: 100%;
+	display: table-row;
+	width: 100%;
 }
 
 footer {
-  display: table-row;
-  width: 100%;
+	display: table-row;
+	width: 100%;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 ul {
-  list-style-type: none;
+	list-style-type: none;
 }
 
 .hide {
-  display: none;
-  transition: var(--mainTransition);
+	display: none;
+	transition: var(--mainTransition);
 }
 
 /* header style */
 
 .menu {
-  width: 85px;
-  height: 85px;
-  border-radius: 50%;
-  position: fixed;
-  margin: auto;
-  bottom: 80%;
-  right: 0;
-  top: 0;
-  left: 90%;
-  z-index: 3;
-  cursor: pointer;
+	width: 85px;
+	height: 85px;
+	border-radius: 50%;
+	position: fixed;
+	margin: auto;
+	bottom: 80%;
+	right: 0;
+	top: 0;
+	left: 90%;
+	z-index: 3;
+	cursor: pointer;
 }
 
 .menuItems {
-  height: 80px;
-  width: 80px;
-  position: fixed;
-  margin: auto;
-  bottom: 78%;
-  right: 0;
-  top: 0;
-  left: 90%;
-  z-index: 2;
+	height: 80px;
+	width: 80px;
+	position: fixed;
+	margin: auto;
+	bottom: 78%;
+	right: 0;
+	top: 0;
+	left: 90%;
+	z-index: 2;
 }
 .menuItems > div {
-  background-color: white;
-  height: 75px;
-  width: 75px;
-  border-radius: 50%;
-  position: relative;
-  font-size: 40px;
-  transition: 0.5s linear;
+	background-color: white;
+	height: 75px;
+	width: 75px;
+	border-radius: 50%;
+	position: relative;
+	font-size: 40px;
+	transition: 0.5s linear;
 }
 .fas {
-  position: relative;
-  top: 3px;
+	position: relative;
+	top: 3px;
 }
 a {
-  color: red;
+	color: red;
 }
 .item2 {
-  bottom: 80px;
+	bottom: 80px;
 }
 .item3 {
-  bottom: 158px;
+	bottom: 158px;
 }
 .item4 {
-  bottom: 228px;
+	bottom: 228px;
 }
 
 .menuItems > div:hover {
-  background-color: red;
+	background-color: red;
 }
 .menuItems > div:hover a {
-  color: white;
+	color: white;
 }
 
 /* end of header style */
@@ -126,19 +126,19 @@ a {
 /* main style */
 /* Pokemon Name in the Top */
 .name {
-  text-align: center;
-  font-size: 60px;
+	text-align: center;
+	font-size: 60px;
 }
 
 /* Big Container */
 .bigContainer {
-  display: flex;
-  justify-content: space-evenly;
+	display: flex;
+	justify-content: space-evenly;
 }
 
 /* Left Container */
 .lContainer {
-  margin-left: 10px;
+	margin-left: 10px;
 }
 /* .imgBox {
 } */
@@ -161,49 +161,50 @@ a {
   left: 500px;
 }
 .lContainer img {
-  width: 400px;
-  height: 522px;
-  /* width: "hide"; */
+	width: 400px;
+	height: 522px;
+	/* width: "hide"; */
 }
 
 .hpContainer {
-  display: flex;
-  margin-top: 44px;
-  margin-left: 12px;
+	display: flex;
+	margin-top: 44px;
+	margin-left: 12px;
 }
 .hpText {
-  font-size: 24px;
-  margin-right: 20px;
-  border: 1px rgb(255, 255, 255) solid;
-  background: #adc;
-  border-radius: 50%;
-  padding-right: 5px;
-  padding-left: 5px;
-  padding-top: 5px;
-  height: 41px;
+
+	font-size: 24px;
+	margin-right: 20px;
+	border: 1px black solid;
+	background: #adc;
+	border-radius: 50%;
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-top: 5px;
+	height: 41px;
 }
 .fullHp {
-  background-color: rgba(58, 86, 156, 0.144);
-  width: 260px;
-  height: 40px;
-  border-radius: 10%;
+	background-color: rgba(58, 86, 156, 0.144);
+	width: 260px;
+	height: 40px;
+	border-radius: 10%;
 }
 .currentHp {
-  background-color: rgb(36, 240, 36);
-  border: 30px;
-  height: 40px;
-  position: relative;
+	background-color: rgb(36, 240, 36);
+	border: 30px;
+	height: 40px;
+	position: relative;
 }
 .numHp {
-  width: 0px;
-  height: 65px;
-  color: rgb(158, 255, 171);
-  font-size: 26px;
-  font-weight: bold;
-  margin-left: 9px;
-  position: absolute;
-  left: 12rem;
-  top: 41.5rem;
+	width: 0px;
+	height: 65px;
+	color: rgb(158, 255, 171);
+	font-size: 26px;
+	font-weight: bold;
+	margin-left: 9px;
+	position: absolute;
+	left: 12rem;
+	top: 41.5rem;
 }
 
 /* Right Container */
@@ -223,37 +224,37 @@ a {
   margin-bottom: 20px;
 } */
 .description {
-  margin-bottom: 40px;
+	margin-bottom: 40px;
 }
 .firstRow {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  /* align-items: flex-end; */
-  width: 825px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	/* align-items: flex-end; */
+	width: 825px;
 }
 .firstRow > div {
-  margin-bottom: 40px;
+	margin-bottom: 40px;
 }
 
 .secRow > div {
-  margin-bottom: 40px;
+	margin-bottom: 40px;
 }
 .secRow {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  /* align-items: flex-end; */
-  width: 825px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	/* align-items: flex-end; */
+	width: 825px;
 }
 .rContainer li:first-child {
-  font-weight: bold;
-  /* border: 1px solid green; */
-  /* background-color: rgb(231 260 179); */
+	font-weight: bold;
+	/* border: 1px solid green; */
+	/* background-color: rgb(231 260 179); */
 }
 
 .abilities {
-  background-color: var(--thirdColor);
+	background-color: var(--thirdColor);
 }
 .att_def_waek {
   display: flex;
@@ -268,55 +269,77 @@ a {
 }
 
 .att_def_waek img {
-  width: 39px;
-  height: 36px;
+	width: 39px;
+	height: 36px;
 }
 
 .words {
-  color: white;
-  background-color: #78c4d4;
-  border-radius: 6%;
-  font-size: 25px;
-  padding-right: 3px;
-  padding-left: 3px;
+	color: white;
+	background-color: #78c4d4;
+	border-radius: 6%;
+	font-size: 25px;
+	padding-right: 3px;
+	padding-left: 3px;
 }
 /* end of main */
 /* footer */
 footer {
-  height: 130px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: var(--secondColor);
-  overflow: hidden;
-  padding: 1.5rem 0;
-  margin-top: 10rem;
+	height: 130px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--secondColor);
+	overflow: hidden;
+	padding: 1.5rem 0;
+	margin-top: 10rem;
 }
 
 .footer-links {
-  list-style: none;
-  width: 10%;
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 1rem;
+	list-style: none;
+	width: 10%;
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 1rem;
 }
 
 .footer-links a {
-  font-size: 200%;
-  color: var(--forthColor);
-  transition: var(--mainTransition);
+	font-size: 200%;
+	color: var(--forthColor);
+	transition: var(--mainTransition);
 }
 
 .footer-links a:hover {
-  color: var(--thirdColor);
+	color: var(--thirdColor);
 }
 
 footer h2 {
-  font-size: 110%;
-  text-transform: capitalize;
-  letter-spacing: 0.2rem;
-  color: var(--forthColor);
+	font-size: 110%;
+	text-transform: capitalize;
+	letter-spacing: 0.2rem;
+	color: var(--forthColor);
 }
 
 /* end of footer */
+
+/*main mohammed*/
+.return {
+	position: absolute;
+	top: 0;
+	left: 1%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 12%;
+	cursor: pointer;
+}
+
+.returnLink {
+	color: var(--forthColor);
+	font-size: 1.2rem;
+	transition: var(--mainTransition);
+}
+
+.returnLink:hover {
+	color: var(--mainColor);
+}

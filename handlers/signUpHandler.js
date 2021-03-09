@@ -8,12 +8,8 @@ const signUpHandler = (req, res) => {
 	let values = [username, password];
 	client.query(SQL, values).then((results) => {
 		if (results.rows.length > 0) {
-			if (password.length < 5) {
-				res.send('Password must be a least 5 characters long');
-			} else {
-				addedPokemonForUser(results.rows[0].user_id);
-				res.redirect('/');
-			}
+			addedPokemonForUser(results.rows[0].user_id);
+			res.redirect('/login');
 		}
 	});
 };

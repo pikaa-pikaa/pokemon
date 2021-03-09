@@ -54,7 +54,7 @@
                     </div>
                     <div class="item4" id="item4">
                         <center>
-                            <a href="/" title="logout">
+                            <a href="/login" title="logout">
                                 <i class="fas fa-sign-out-alt"></i>
                             </a>
                         </center>
@@ -63,7 +63,7 @@
             </div>
         </header>
         <main>
-            <h1>Dashboard</h1>
+             <h2 class="hello"> <%=user.username %>'s Dashboard </h2>
             <section class="cards">
                 <% pokemons.forEach((pokemon)=> { %>
                     <div class="card">
