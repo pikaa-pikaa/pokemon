@@ -54,6 +54,9 @@ app.get('/aboutUs/:userId', (req, res) => {
 	let userId = req.params.userId;
 	res.render('pages/aboutUs', { userId });
 });
+app.get('/aboutUs', (req, res) => {
+	res.render('pages/aboutUsFirst');
+});
 
 // listen
 const PORT = process.env.PORT || 3000;

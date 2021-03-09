@@ -1,0 +1,336 @@
+/* global style*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--mainTransition: all 0.5s ease-in-out;
+	--mainFont: 'Yanone Kaffeesatz', sans-serif;
+	--mainColor: rgb(149, 0, 0);
+	--secondColor: rgb(0, 72, 141);
+	--thirdColor: rgb(240, 207, 0);
+	--forthColor: white;
+	--fifthColor: rgb(58, 85, 156);
+	--darkColor: black;
+}
+
+html {
+	scroll-behavior: smooth;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 100vh;
+	width: 100%;
+	display: table;
+	font-family: var(--mainFont);
+	background: url('./../../images/back.jpg') center/cover no-repeat scroll;
+	font-size: 1.2rem;
+}
+
+header {
+	display: table-row;
+	width: 100%;
+}
+
+main {
+	display: table-row;
+	width: 100%;
+	height: 100%;
+}
+
+footer {
+	display: table-row;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.hide {
+	display: none;
+	transition: var(--mainTransition);
+}
+
+/* header */
+header {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	transform: translateX(-50%);
+	height: 70px;
+	background-color: var(--secondColor);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom-left-radius: 2rem;
+	border-bottom-right-radius: 2rem;
+}
+
+ul {
+	width: 60%;
+	height: 100%;
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+li a {
+	font-size: 2rem;
+	color: var(--thirdColor);
+	font-weight: bold;
+	transition: var(--mainTransition);
+}
+
+li {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 0 1rem;
+	transition: var(--mainTransition);
+}
+
+li:hover {
+	background-color: var(--fifthColor);
+}
+
+li a:hover {
+	color: var(--forthColor);
+}
+
+/* end of header */
+
+/* main style */
+/* Pokemon Name in the Top */
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 5rem;
+}
+
+.name {
+	text-align: center;
+	font-size: 2rem;
+	background-color: var(--mainColor);
+	color: var(--forthColor);
+	width: 20%;
+	padding: 0.5rem 2rem;
+	border-radius: 0.5rem;
+}
+
+/* Big Container */
+.bigContainer {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+/* Left Container */
+
+.lContainer {
+	flex: 0 0 calc(25% - 2rem);
+	height: 90%;
+}
+
+.imgBox {
+	width: 100%;
+	height: 100%;
+}
+
+.lContainer img {
+	width: 100%;
+	height: 100%;
+}
+
+.hpContainer {
+	display: flex;
+	margin-top: 44px;
+	margin-left: 12px;
+}
+
+.hpText {
+	font-size: 24px;
+	margin-right: 20px;
+	border: 1px black solid;
+	background: var(--mainColor);
+	color: var(--forthColor);
+	border-radius: 50%;
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-top: 5px;
+	height: 41px;
+}
+
+.fullHp {
+	background-color: var(--forthColor);
+	width: 260px;
+	height: 40px;
+	border-radius: 10%;
+}
+
+.currentHp {
+	background-color: var(--mainColor);
+	border: 30px;
+	height: 40px;
+	position: relative;
+}
+
+.numHp {
+	width: 0px;
+	height: 65px;
+	color: var(--forthColor);
+	font-size: 26px;
+	font-weight: bold;
+	margin-left: 9px;
+	position: absolute;
+	left: 13%;
+	top: 102%;
+}
+
+/* Right Container */
+.rContainer {
+	display: flex;
+	flex-direction: column;
+	font-size: large;
+	margin-top: 30px;
+	font-size: 30px;
+	width: 825px;
+	background-color: var(--secondColor);
+	color: var(--thirdColor);
+	padding: 1rem;
+	border-radius: 1rem;
+}
+
+.description {
+	margin-bottom: 40px;
+}
+.firstRow {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	width: 825px;
+}
+.firstRow > div {
+	margin-bottom: 40px;
+}
+
+.secRow > div {
+	margin-bottom: 40px;
+}
+.secRow {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 825px;
+}
+.rContainer li:first-child {
+	font-weight: bold;
+}
+
+.att_def_waek {
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	justify-content: space-between;
+	border-radius: 2%;
+	padding-left: 6px;
+}
+
+.att_def_waek img {
+	width: 39px;
+	height: 36px;
+	margin-right: 1rem;
+}
+
+.att_def_waek li {
+	color: var(--mainColor);
+}
+
+ul .words {
+	color: var(--thirdColor);
+}
+
+.words {
+	border-radius: 6%;
+	font-size: 25px;
+	padding-right: 3px;
+	padding-left: 3px;
+}
+/* end of main */
+
+/* footer */
+footer {
+	height: 130px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--secondColor);
+	overflow: hidden;
+	padding: 1.5rem 0;
+}
+
+.footer-links {
+	list-style: none;
+	width: 10%;
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 1rem;
+}
+
+.footer-links a {
+	font-size: 200%;
+	color: var(--forthColor);
+	transition: var(--mainTransition);
+}
+
+.footer-links a:hover {
+	color: var(--thirdColor);
+}
+
+footer h2 {
+	font-size: 110%;
+	text-transform: capitalize;
+	letter-spacing: 0.2rem;
+	color: var(--forthColor);
+}
+
+/* end of footer */
+
+/*main mohammed*/
+.return {
+	position: absolute;
+	top: 0;
+	left: 1%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 12%;
+	cursor: pointer;
+}
+
+.returnLink {
+	color: var(--forthColor);
+	font-size: 1.2rem;
+	transition: var(--mainTransition);
+}
+
+.returnLink:hover {
+	color: var(--mainColor);
+}

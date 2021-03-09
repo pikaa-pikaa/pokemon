@@ -292,6 +292,58 @@ main {
 	color: var(--mainColor);
 }
 
+/* header */
+header {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	transform: translateX(-50%);
+	height: 70px;
+	background-color: var(--secondColor);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom-left-radius: 2rem;
+	border-bottom-right-radius: 2rem;
+}
+
+ul {
+	width: 60%;
+	height: 100%;
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+li a {
+	font-size: 2rem;
+	color: var(--thirdColor);
+	font-weight: bold;
+	transition: var(--mainTransition);
+}
+
+li {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 0 1rem;
+	transition: var(--mainTransition);
+}
+
+li:hover {
+	background-color: var(--fifthColor);
+}
+
+li a:hover {
+	color: var(--forthColor);
+}
+
+/* end of header */
+
 /* footer */
 
 footer {
