@@ -15,6 +15,10 @@ $(function () {
 
 	$('.navBarsOpen').on('click', pop());
 	//end navbar
+
+	
+
+
 });
 
 let i = 0;
