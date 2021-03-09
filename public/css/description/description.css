@@ -88,7 +88,7 @@ ul {
 	left: 90%;
 }
 .menuItems > div {
-	background-color: white;
+	background-color: var(--secondColor);
 	height: 75px;
 	width: 75px;
 	border-radius: 50%;
@@ -98,7 +98,7 @@ ul {
 }
 
 a {
-	color: red;
+	color: var(--thirdColor);
 }
 
 .item1 {
@@ -114,14 +114,14 @@ a {
 	align-items: center;
 }
 .item3 {
-	bottom: 160px;
+	bottom: 158px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .item4 {
-	bottom: 235px;
+	bottom: 232px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -130,6 +130,7 @@ a {
 .menuItems > div:hover {
 	background-color: red;
 }
+
 .menuItems > div:hover a {
 	color: white;
 }
@@ -143,56 +144,55 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 5rem;
-}
-
-.name {
-	text-align: center;
-	font-size: 2rem;
-	background-color: var(--mainColor);
-	color: var(--forthColor);
-	width: 20%;
-	padding: 0.5rem 2rem;
-	border-radius: 0.5rem;
 }
 
 /* Big Container */
 .bigContainer {
-	width: 100%;
+	width: 80%;
+	height: 85%;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	align-items: center;
+	overflow: hidden;
+	background-color: rgba(255, 255, 255, 0.18);
+	border-radius: 2rem;
 }
 
 /* Left Container */
 
 .lContainer {
-	flex: 0 0 calc(25% - 2rem);
-	height: 90%;
+	flex: 0 0 calc(35% - 2rem);
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	background-color: var(--secondColor);
 }
 
 .imgBox {
-	width: 100%;
-	height: 100%;
+	width: 80%;
+	height: 80%;
 }
 
-.lContainer img {
+.imgBox img {
 	width: 100%;
 	height: 100%;
 }
 
 .hpContainer {
 	display: flex;
-	margin-top: 44px;
-	margin-left: 12px;
+	justify-content: center;
+	align-items: center;
 }
 
 .hpText {
 	font-size: 24px;
-	margin-right: 20px;
+	margin-right: 10px;
 	border: 1px black solid;
-	background: var(--mainColor);
-	color: var(--forthColor);
+	background: var(--thirdColor);
+	color: var(--secondColor);
 	border-radius: 50%;
 	padding-right: 5px;
 	padding-left: 5px;
@@ -208,93 +208,92 @@ main {
 }
 
 .currentHp {
-	background-color: var(--mainColor);
+	background-color: var(--thirdColor);
 	border: 30px;
 	height: 40px;
 	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 .numHp {
-	width: 0px;
-	height: 65px;
 	color: var(--forthColor);
 	font-size: 26px;
 	font-weight: bold;
-	margin-left: 9px;
-	position: absolute;
-	left: 13%;
-	top: 102%;
+	margin-left: 5px;
+	color: var(--secondColor);
 }
 
 /* Right Container */
+
 .rContainer {
+	flex: 0 0 calc(70% - 2rem);
+	height: 90%;
+	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-	font-size: large;
-	margin-top: 30px;
-	font-size: 30px;
-	width: 825px;
-	background-color: var(--secondColor);
+	align-items: center;
+	justify-content: space-between;
 	color: var(--thirdColor);
-	padding: 1rem;
-	border-radius: 1rem;
+}
+
+.name {
+	background-color: var(--mainColor);
+	color: var(--forthColor);
+	width: 30%;
+	padding: 0.5rem 0;
+	text-align: center;
+	border-radius: 0.5rem;
 }
 
 .description {
-	margin-bottom: 40px;
+	width: 90%;
+	text-align: center;
+	margin: 1rem 0 0.5rem;
+	color: var(--darkColor);
+	font-size: 1.4rem;
 }
+
 .firstRow {
+	width: 85%;
+	height: 70%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	width: 825px;
-}
-.firstRow > div {
-	margin-bottom: 40px;
+	align-items: flex-start;
 }
 
-.secRow > div {
-	margin-bottom: 40px;
+.firstRow div img {
+	width: 35px;
+	height: 35px;
 }
-.secRow {
+
+.ability {
+	width: 25%;
 	display: flex;
-	flex-direction: column;
 	justify-content: space-between;
-	width: 825px;
-}
-.rContainer li:first-child {
+	align-items: center;
+	margin-bottom: 0.5rem;
+	color: var(--darkColor);
 	font-weight: bold;
+	letter-spacing: 0.1rem;
+	font-size: 1.5rem;
 }
 
-.att_def_waek {
-	display: flex;
-	flex-direction: column;
-	width: 400px;
-	justify-content: space-between;
-	border-radius: 2%;
-	padding-left: 6px;
+.ability span {
+	margin-left: 1rem;
 }
 
-.att_def_waek img {
-	width: 39px;
-	height: 36px;
-	margin-right: 1rem;
-}
-
-.att_def_waek li {
-	color: var(--mainColor);
-}
-
-ul .words {
-	color: var(--thirdColor);
+.Defence {
+	margin-right: 3px;
 }
 
 .words {
-	border-radius: 6%;
-	font-size: 25px;
-	padding-right: 3px;
-	padding-left: 3px;
+	margin-left: 3rem;
+	color: var(--forthColor);
 }
+
 /* end of main */
 
 /* footer */

@@ -19,12 +19,7 @@ $(function () {
 	});
 
 	$('.fullHp').append($('.currentHp'));
-	// $("#pokemonImg").animate(
-	//   {
-	//     height: "522",
-	//   },
-	//   1000
-	// );
+	$('.currentHp').append($('.numHp'));
 
 	$('.numHp').animate(
 		{
@@ -34,14 +29,6 @@ $(function () {
 	);
 });
 
-// let a = $(".weak").text();
-// let arr = a.split(/(a-z)\i/g);
-// // arr = arr[0].split(/(a-z)\i/g);
-// // let arr = JSON.stringify(a);
-// // let b = a.join("");
-// $(".test").text(arr);
-// // $('.attack').
-// $(".attack").replaceWith(`<span>${arr}<\span>`);
 let i = 0;
 function pop() {
 	if (i == 0) {
