@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
 /* global style*/
 
 * {
@@ -123,14 +126,6 @@ a {
 
 /* end of header style */
 
-/* main style */
-
-main {
-	display: flex;
-	flex-direction: column;
-	position: relative;
-}
-
 /* Title style */
 
 .title {
@@ -147,77 +142,137 @@ main {
 	border-radius: 0.5rem;
 
 }
-.bigContainer{
-	position: relative;
-	top: 20%;
+/* new style */
+
+body{
+	margin:0;
+	font-family: 'Open Sans', sans-serif;
+}
+*{
+	box-sizing: border-box;
 }
 
-.containerUp {
-	display: flex;
-	justify-content: space-evenly;
-	margin-bottom: 50px;
-	position: relative;
+.team-section{
+	background: url('back.jpg') center/cover no-repeat scroll;
+	min-height: 100vh;
+	padding:70px 15px 30px;
 }
 
-.containerDown {
-	display: flex;
-	justify-content: space-evenly;
-	position: relative;
+.container{
+	max-width: 1170px;
+	margin:auto;
 }
-h3{
-  margin-top: 1rem;
-}
-.member {
+
+.row{
 	display: flex;
-	flex-direction: column;
-	width: 270px;
-	height: 270px;
-	border: 3px solid var(--mainColor);
-	border-radius: 20%;
+	flex-wrap: wrap;
+}
+
+.team-section .section-title{
+	flex-basis: 100%;
+	max-width: 100%;
+	margin-bottom: 70px;
+}
+
+.team-section .section-title p{
+	font-size: 1.75rem;
 	text-align: center;
-	align-items: center;
-	background-color: rgb(202, 202, 202);
-	/* box-shadow: 0px 0px 5px 5px var(--forthColor); */
-	box-shadow: 0px 0px 20px 0px rgba(255,255,255,0.75);
+	margin:15px 0 0;
+	color:#ffffff;
+}
+.team-section .team-items{
+	
+	flex-basis: 100%;
+	max-width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.team-section .team-items .item{
+ flex-basis: calc(25% - 30px);
+ max-width: calc(25% - 30px);
+ transition: all .5s ease;
+ margin-bottom: 40px;
+}
+.team-section .team-items .item img{
+	display: block;
+	width: 100%;
+	border-radius: 8px;
+	border: 2px black solid;
+}
+
+.team-section .team-items .item .inner{
 	position: relative;
+	z-index: 11;
+	padding:0 15px;
+}
+.team-section .team-items .item .inner .info{
+	background-color:black;
+	text-align: center;
+	padding: 20px 15px;
+	border-radius:8px;
+	transition: all .5s ease;
+	margin-top: -40px;
+}
+.team-section .team-items .item:hover  .info{
+    transform: translateY(-20px);
+}
+.team-section .team-items .item:hover{
+ transform: translateY(-10px);	
+}
+.team-section .team-items .item .inner .info h5{
+	margin:0;
+	font-size: 18px;
+	font-weight: 600;
+	color:#ffffff;
+}
+.team-section .team-items .item .inner .info p{
+	font-size: 16px;
+	font-weight: 400;
+	color:red;
+	margin:10px 0 0;
 }
 
-.member img {
-	width: 130px;
-	height: 130px;
+.team-section .team-items .item .inner .info .social-links{
+	padding-top: 15px;
+}
+
+.team-section .team-items .item .inner .info .social-links a{
+	display: inline-block;
+	height: 32px;
+	width: 32px;
+	background-color: #ffffff;
+	color:blue;
 	border-radius: 50%;
-	margin-top: 30px;
-	flex-direction: column-reverse;
+	margin:0 5px;
+	text-align: center;
+	line-height: 32px;
+	font-size:18px;
+	transition: all .5s ease;
 }
 
-/* icons */
-.icons{
-    display: flex;
-    justify-content: center;
-    padding: .8rem 0;
-}
-.icons li{
-    list-style-type: none;
-    background: var(--secondColor);
-    color: #fff;
-    width: 30px;
-    height: 30px;
-    margin: 0 0.5rem;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
-}
-.icons li:hover{
-    background: var(--mainColor);
-    color: var(--forthColor);
+.team-section .team-items .item .inner .info .social-links a:hover{
+	box-shadow: 0 0 20px white;
 }
 
+/*responsive*/
+@media(max-width: 991px){
+	.team-section .team-items .item{
+      flex-basis: calc(50% - 30px);
+       max-width: calc(50% - 30px);
 
-/* end of main style */
+   }
+}
+
+@media(max-width: 767px){
+	.team-section .team-items .item{
+      flex-basis: calc(100%);
+       max-width: calc(100%);
+
+   }
+}
+
+/* end of new style */
 
 /* footer */
 footer {
