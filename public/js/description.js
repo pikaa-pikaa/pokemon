@@ -34,10 +34,14 @@ $(function () {
   );
 });
 
-let a = $(".attack").html();
-
-// let b = a.join("");
-$(".test").text(a);
+// let a = $(".weak").text();
+// let arr = a.split(/(a-z)\i/g);
+// // arr = arr[0].split(/(a-z)\i/g);
+// // let arr = JSON.stringify(a);
+// // let b = a.join("");
+// $(".test").text(arr);
+// // $('.attack').
+// $(".attack").replaceWith(`<span>${arr}<\span>`);
 
 let i = 0;
 function pop() {
@@ -56,4 +60,4 @@ function pop() {
   }
 }
 
-console.log(typeof a);
+// console.log(a);

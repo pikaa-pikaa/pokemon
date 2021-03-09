@@ -72,7 +72,9 @@
 
         <div class="bigContainer">
             <div class="lContainer">
-                <img id="pokemonImg" src="<%= pokemonDescription.image %> " alt="<%=pokemonDescription.name%>">
+                <div class="imgBox">
+                    <img class="pokemonImg" id="pokemonImg" src="<%= pokemonDescription.image %> " alt="<%=pokemonDescription.name%>">
+                </div>
                 <div class="hpContainer">
                     <h4 class="hpText">Hp</h4>
                     <div class="fullHp"></div>
@@ -102,17 +104,18 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="test"></div>
-                        <div style="display: flex;">
-                            <img src="/images/describtionStyle/attack.png" alt="attack">
+                        <% console.log(pokemonDescription) %>
+                            <!-- <div class="test"></div> -->
+                            <div style="display: flex;">
+                                <img src="/images/describtionStyle/attack.png" alt="attack">
 
-                            <ul>
-                                <li>Attack</li>
-                                <li class="words attack">
-                                    <%= pokemonDescription.attack %>
-                                </li>
-                            </ul>
-                        </div>
+                                <ul>
+                                    <li>Attack</li>
+                                    <li class="words attack">
+                                        <%= pokemonDescription.attack %>
+                                    </li>
+                                </ul>
+                            </div>
                     </div>
                     <div class=" secRow">
                         <div style="display: flex;">
@@ -128,7 +131,7 @@
                             <img src="/images/describtionStyle/weak.png" alt="Weaknesses">
                             <ul>
                                 <li>Weaknesses</li>
-                                <span class="words">
+                                <span class="words weak">
                                     <%= pokemonDescription.weaknesses %>
                                 </span>
                             </ul>
