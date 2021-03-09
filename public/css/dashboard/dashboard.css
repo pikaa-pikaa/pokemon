@@ -28,7 +28,7 @@ body {
 	width: 100%;
 	display: table;
 	font-family: var(--mainFont);
-	background: url('./../../images/back.jpg') center/cover no-repeat scroll;
+	background: rgb(44, 43, 48);
 	font-size: 1.2rem;
 }
 
@@ -71,7 +71,7 @@ ul {
 	right: 0;
 	top: 0;
 	left: 90%;
-	z-index: 2;
+	z-index: 3;
 	cursor: pointer;
 }
 
@@ -84,6 +84,7 @@ ul {
 	right: 0;
 	top: 0;
 	left: 90%;
+	z-index: 2;
 }
 .menuItems > div {
 	background-color: var(--secondColor);
@@ -96,7 +97,7 @@ ul {
 }
 
 a {
-	color:var(--thirdColor);
+	color: var(--thirdColor);
 }
 
 .item1 {
@@ -146,16 +147,16 @@ main {
 
 .hello {
 	position: absolute;
-	top: 9%;
-	left: 34%;
+	top: 15%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	margin: 0 0 2rem;
 	letter-spacing: 0.2rem;
 	font-size: 200%;
 	background-color: var(--mainColor);
 	color: var(--forthColor);
 	padding: 0.5rem 2rem;
-	border-radius: 0.5rem;
-
+	border-radius: 1rem;
 }
 /* end of Title style */
 
@@ -189,7 +190,7 @@ main {
 .card:hover {
 	transition: transform 0.5s;
 	transform: scale(1.25);
-	box-shadow: 0 0 5px 5px rgb(255, 255, 125);
+	box-shadow: 0 0 5px 5px var(--mainColor);
 }
 
 .card a img {
@@ -212,7 +213,6 @@ footer {
 	background-color: var(--secondColor);
 	overflow: hidden;
 	padding: 1.5rem 0;
-	margin-top: 10rem;
 }
 
 .footer-links {

@@ -97,7 +97,7 @@ ul {
 }
 
 a {
-	color:var(--thirdColor);
+	color: var(--thirdColor);
 }
 
 .item1 {
@@ -155,7 +155,7 @@ h1 {
 
 .characters {
 	width: 70%;
-	height: 90%;
+	height: 80%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -163,8 +163,9 @@ h1 {
 }
 
 .character {
+	flex: 0 0 calc(22% - 3rem);
 	width: 20%;
-	height: 25rem;
+	height: 20rem;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
@@ -175,7 +176,7 @@ h1 {
 
 .character img {
 	width: 10rem;
-	height: 18rem;
+	height: 15rem;
 }
 
 .character p {
@@ -189,7 +190,7 @@ h1 {
 }
 
 .random {
-	width: 22%;
+	width: 30%;
 	height: 30rem;
 	overflow: hidden;
 	display: flex;
@@ -200,11 +201,12 @@ h1 {
 }
 
 .random img {
-	width: 17rem;
-	height: 17rem;
+	width: 12rem;
+	height: 12rem;
 }
 
 .start {
+	width: 100%;
 	margin-top: 2rem;
 	letter-spacing: 0.1rem;
 	font-size: 110%;
@@ -224,13 +226,25 @@ h1 {
 	padding: 0.5rem 1rem;
 	border-radius: 0.5rem;
 	transition: var(--mainTransition);
+	animation: lighting 1.5s infinite;
 }
 
 .fight:hover {
-	background-color: var(--darkColor);
-	color: var(--thirdColor);
-	transform: scale(1.2);
+	background-color: var(--forthColor);
+	color: var(--mainColor);
 	cursor: pointer;
+}
+
+@keyframes lighting {
+	0% {
+		transform: scale(1);
+	}
+	75% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
 }
 
 /* end of main style */

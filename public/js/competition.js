@@ -41,6 +41,8 @@ $(function () {
 
 	let cardCount = 0;
 
+	let click = true;
+
 	cards.forEach((card, index) => {
 		card.addEventListener('click', function (e) {
 			e.preventDefault();
@@ -115,6 +117,18 @@ $(function () {
 				}
 			}
 		});
+	});
+
+	let winLoseBtn = document.querySelector('.winLoseBtn');
+
+	winLoseBtn.addEventListener('click', () => {
+		if (click) {
+			click = false;
+		} else {
+			winLoseBtn.onclick = function () {
+				return false;
+			};
+		}
 	});
 
 	//end of card
