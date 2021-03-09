@@ -86,7 +86,7 @@ ul {
 	z-index: 2;
 }
 .menuItems > div {
-	background-color: white;
+	background-color: var(--secondColor);
 	height: 75px;
 	width: 75px;
 	border-radius: 50%;
@@ -99,7 +99,7 @@ ul {
 	top: 3px;
 }
 a {
-	color: red;
+	color:var(--thirdColor);
 }
 .item2 {
 	bottom: 80px;
@@ -108,7 +108,7 @@ a {
 	bottom: 158px;
 }
 .item4 {
-	bottom: 228px;
+	bottom: 232px;
 }
 
 .menuItems > div:hover {

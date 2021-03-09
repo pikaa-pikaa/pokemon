@@ -86,7 +86,7 @@ ul {
 	left: 90%;
 }
 .menuItems > div {
-	background-color: white;
+	background-color: var(--secondColor);
 	height: 75px;
 	width: 75px;
 	border-radius: 50%;
@@ -96,7 +96,7 @@ ul {
 }
 
 a {
-	color: red;
+	color:var(--thirdColor);
 }
 
 .item1 {
@@ -112,14 +112,14 @@ a {
 	align-items: center;
 }
 .item3 {
-	bottom: 160px;
+	bottom: 158px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .item4 {
-	bottom: 235px;
+	bottom: 232px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -147,7 +147,15 @@ main {
 .hello {
 	position: absolute;
 	top: 9%;
-	left: 45%;
+	left: 34%;
+	margin: 0 0 2rem;
+	letter-spacing: 0.2rem;
+	font-size: 200%;
+	background-color: var(--mainColor);
+	color: var(--forthColor);
+	padding: 0.5rem 2rem;
+	border-radius: 0.5rem;
+
 }
 /* end of Title style */
 

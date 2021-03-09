@@ -131,7 +131,7 @@ header {
 	left: 90%;
 }
 .menuItems > div {
-	background-color: white;
+	background-color: var(--secondColor);
 	height: 75px;
 	width: 75px;
 	border-radius: 50%;
@@ -141,7 +141,7 @@ header {
 }
 
 a {
-	color: red;
+	color:var(--thirdColor);
 }
 
 .item1 {
@@ -157,14 +157,14 @@ a {
 	align-items: center;
 }
 .item3 {
-	bottom: 160px;
+	bottom: 158px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .item4 {
-	bottom: 235px;
+	bottom: 232px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
