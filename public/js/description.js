@@ -1,22 +1,20 @@
 $(function () {
-	$(function () {
-		//navbar
+	//navbar
 
-		$('.navBarsClose').on('click', function () {
-			$('.navBarsOpen').removeClass('hide');
-			$('.navBarsClose').addClass('hide');
-		});
-
-		$('.navBarsOpen').on('click', function () {
-			$('.navBarsOpen').addClass('hide');
-			$('.navBarsClose').removeClass('hide');
-		});
-
-		$('.navBarsClose').on('click', pop());
-
-		$('.navBarsOpen').on('click', pop());
-		//end navbar
+	$('.navBarsClose').on('click', function () {
+		$('.navBarsOpen').removeClass('hide');
+		$('.navBarsClose').addClass('hide');
 	});
+
+	$('.navBarsOpen').on('click', function () {
+		$('.navBarsOpen').addClass('hide');
+		$('.navBarsClose').removeClass('hide');
+	});
+
+	$('.navBarsClose').on('click', pop());
+
+	$('.navBarsOpen').on('click', pop());
+	//end navbar
 
 	$('.fullHp').append($('.currentHp'));
 	$('.currentHp').append($('.numHp'));
@@ -45,5 +43,3 @@ function pop() {
 		i = 0;
 	}
 }
-
-// console.log(a);
