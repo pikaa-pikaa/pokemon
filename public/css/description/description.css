@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+/* font-family: 'Cairo', sans-serif; */
 /* global style*/
 
 * {
@@ -8,7 +10,7 @@
 
 :root {
 	--mainTransition: all 0.3s ease-in-out;
-	--mainFont: 'DotGothic16', sans-serif;
+	--mainFont: 'arial';
 	--mainColor: rgb(149, 0, 0);
 	--secondColor: rgb(0, 72, 141);
 	--thirdColor: rgb(240, 207, 0);
@@ -122,34 +124,41 @@ a {
 /* end of header style */
 
 /* main style */
+/* Pokemon Name in the Top */
 .name {
 	text-align: center;
 	font-size: 60px;
 }
+
+/* Big Container */
 .bigContainer {
 	display: flex;
 	justify-content: space-evenly;
 }
-.rContainer {
+
+/* Left Container */
+.lContainer {
 	margin-left: 10px;
 }
-.rContainer img {
+.lContainer img {
 	width: 400px;
 	height: 522px;
 	/* width: "hide"; */
 }
 .hpContainer {
 	display: flex;
-	margin-top: 10px;
+	margin-top: 44px;
+	margin-left: 12px;
 }
 .hpText {
 	font-size: 24px;
 	margin-right: 20px;
 	border: 1px black solid;
 	background: #adc;
-	border-radius: 4px;
+	border-radius: 50%;
 	padding-right: 5px;
 	padding-left: 5px;
+	padding-top: 5px;
 	height: 41px;
 }
 .fullHp {
@@ -159,26 +168,25 @@ a {
 	border-radius: 10%;
 }
 .currentHp {
-	background-image: linear-gradient(
-		45deg,
-		var(--forthColor),
-		var(--secondColor),
-		var(--thirdColor),
-		var(--forthColor),
-		var(--darkColor)
-	);
-
+	background-color: rgb(36, 240, 36);
+	border: 30px;
 	height: 40px;
+	position: relative;
 }
 .numHp {
 	width: 0px;
-	color: blue;
+	height: 65px;
+	color: rgb(158, 255, 171);
 	font-size: 26px;
 	font-weight: bold;
 	margin-left: 9px;
+	position: absolute;
+	left: 12rem;
+	top: 41.5rem;
 }
 
-.lContainer {
+/* Right Container */
+.rContainer {
 	display: flex;
 	flex-direction: column;
 	/* justify-content: space-evenly; */
@@ -187,30 +195,67 @@ a {
 	margin-top: 30px;
 	font-size: 30px;
 	width: 825px;
-}
-.lContainer > * {
-	margin-bottom: 20px;
-}
-.lContainer li:first-child {
-	font-weight: bold;
-	border: 1px solid green;
-	background-color: rgb(231 260 179);
+	border: 2px solid yellow;
 }
 
+/* .rContainer > * {
+  margin-bottom: 20px;
+} */
 .description {
-	background-color: var(--fifthColor);
+	margin-bottom: 40px;
 }
+.firstRow {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	/* align-items: flex-end; */
+	width: 825px;
+}
+.firstRow > div {
+	margin-bottom: 40px;
+}
+
+.secRow > div {
+	margin-bottom: 40px;
+}
+.secRow {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	/* align-items: flex-end; */
+	width: 825px;
+}
+.rContainer li:first-child {
+	font-weight: bold;
+	/* border: 1px solid green; */
+	/* background-color: rgb(231 260 179); */
+}
+
 .abilities {
 	background-color: var(--thirdColor);
 }
 .att_def_waek {
 	display: flex;
-	background-color: var(--forthColor);
+	flex-direction: column;
+	/* background-color: var(--forthColor); */
+	width: 400px;
 	justify-content: space-between;
 }
 
-/* end of main style */
+.att_def_waek img {
+	width: 39px;
+	height: 36px;
+}
 
+.words {
+	color: white;
+	background-color: #78c4d4;
+	border-radius: 6%;
+	font-size: 25px;
+	padding-right: 3px;
+	padding-left: 3px;
+}
+/* end of main */
 /* footer */
 footer {
 	height: 130px;
@@ -250,3 +295,25 @@ footer h2 {
 }
 
 /* end of footer */
+
+/*main mohammed*/
+.return {
+	position: absolute;
+	top: 0;
+	left: 1%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 12%;
+	cursor: pointer;
+}
+
+.returnLink {
+	color: var(--forthColor);
+	font-size: 1.2rem;
+	transition: var(--mainTransition);
+}
+
+.returnLink:hover {
+	color: var(--mainColor);
+}
