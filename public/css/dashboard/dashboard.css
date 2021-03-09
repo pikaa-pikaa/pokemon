@@ -7,8 +7,8 @@
 }
 
 :root {
-	--mainTransition: all 0.3s ease-in-out;
-	--mainFont: 'DotGothic16', sans-serif;
+	--mainTransition: all 0.5s ease-in-out;
+	--mainFont: 'Yanone Kaffeesatz', sans-serif;
 	--mainColor: rgb(149, 0, 0);
 	--secondColor: rgb(0, 72, 141);
 	--thirdColor: rgb(240, 207, 0);
@@ -28,8 +28,8 @@ body {
 	width: 100%;
 	display: table;
 	font-family: var(--mainFont);
-	background-color: #b4cfe2;
-	/* background-color: rgba(58, 86, 156, 0.144); */
+	background: url('./../../images/back.jpg') center/cover no-repeat scroll;
+	font-size: 1.2rem;
 }
 
 header {
@@ -49,8 +49,6 @@ footer {
 
 a {
 	text-decoration: none;
-	/* background-color: blue;
-	border-radius: 80%; */
 }
 
 ul {
@@ -64,8 +62,8 @@ ul {
 /* header style */
 
 .menu {
-	width: 85px;
-	height: 85px;
+	width: 88px;
+	height: 88px;
 	border-radius: 50%;
 	position: fixed;
 	margin: auto;
@@ -73,7 +71,7 @@ ul {
 	right: 0;
 	top: 0;
 	left: 90%;
-	z-index: 3;
+	z-index: 2;
 	cursor: pointer;
 }
 
@@ -86,7 +84,6 @@ ul {
 	right: 0;
 	top: 0;
 	left: 90%;
-	z-index: 2;
 }
 .menuItems > div {
 	background-color: white;
@@ -97,29 +94,42 @@ ul {
 	font-size: 40px;
 	transition: 0.5s linear;
 }
-.fas {
-	position: relative;
-	top: 3px;
-}
+
 a {
-	color: royalblue;
+	color: red;
 }
+
+.item1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .item2 {
 	bottom: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .item3 {
-	bottom: 158px;
+	bottom: 160px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
+
 .item4 {
-	bottom: 228px;
+	bottom: 235px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .menuItems > div:hover {
-	background-color: blue;
-	
+	background-color: red;
 }
 .menuItems > div:hover a {
-	color: rgb(255, 85, 85);
+	color: white;
 }
 
 /* end of header style */
@@ -134,7 +144,7 @@ main {
 
 /* Title style */
 
-.hello{
+.hello {
 	position: absolute;
 	top: 9%;
 	left: 45%;
@@ -153,11 +163,8 @@ main {
 	transition: var(--mainTransition);
 	margin-top: 10rem;
 	width: 70rem;
-    border: 3px solid  transparent;
-    padding: 25px;
-	/* border: 0.5rem outset  var(--secondColor); */
-	/* border-image: url(/images/closeBall.png) 30 round ;
-	border-image-slice: 10%; */
+	border: 3px solid transparent;
+	padding: 25px;
 }
 
 .card {
@@ -166,15 +173,15 @@ main {
 	height: 60%;
 	border-radius: 1rem;
 	transition: var(--mainTransition);
-	margin: 0.5rem ;
-	padding: -.5rem;	
-	box-shadow: 0 0 5px 5px ;
+	margin: 0.5rem;
+	padding: -0.5rem;
+	box-shadow: 0 0 5px 5px;
 	margin-top: 2rem;
 }
-.card:hover{
-   transition: transform .5s;
-   transform: scale(1.25);
-   box-shadow: 0 0 5px 5px  rgb(255, 255, 125) ;
+.card:hover {
+	transition: transform 0.5s;
+	transform: scale(1.25);
+	box-shadow: 0 0 5px 5px rgb(255, 255, 125);
 }
 
 .card a img {
