@@ -1,0 +1,248 @@
+/* global style*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--mainTransition: all 0.3s ease-in-out;
+	--mainFont: 'DotGothic16', sans-serif;
+	--mainFont: 'Yanone Kaffeesatz', sans-serif;
+
+	--mainColor: rgb(149, 0, 0);
+	--secondColor: rgb(0, 72, 141);
+	--thirdColor: rgb(240, 207, 0);
+	--forthColor: white;
+	--fifthColor: rgb(58, 85, 156);
+	--darkColor: black;
+}
+
+html {
+	scroll-behavior: smooth;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	display: table;
+	font-family: var(--mainFont);
+	background: url('./../../images/back.jpg') center/cover no-repeat scroll;
+}
+
+header {
+	display: table-row;
+	width: 100%;
+}
+
+main {
+	display: table-row;
+	height: 100%;
+}
+
+footer {
+	display: table-row;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.hide {
+	display: none;
+	transition: var(--mainTransition);
+}
+
+/* header */
+header {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	transform: translateX(-50%);
+	height: 70px;
+	background-color: var(--secondColor);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom-left-radius: 2rem;
+	border-bottom-right-radius: 2rem;
+}
+
+ul {
+	width: 60%;
+	height: 100%;
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+li a {
+	font-size: 2rem;
+	color: var(--thirdColor);
+	font-weight: bold;
+	transition: var(--mainTransition);
+}
+
+li {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 0 1rem;
+	transition: var(--mainTransition);
+}
+
+li:hover {
+	background-color: var(--fifthColor);
+}
+
+li a:hover {
+	color: var(--forthColor);
+}
+
+/* end of header */
+
+/* main style */
+
+main {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+/* Title style */
+
+.title {
+	transform: translate(-50%, -50%);
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	margin: 0 0 2rem;
+	letter-spacing: 0.2rem;
+	font-size: 200%;
+	background-color: var(--mainColor);
+	color: var(--forthColor);
+	padding: 0.5rem 2rem;
+	border-radius: 0.5rem;
+}
+.bigContainer {
+	position: relative;
+	top: 20%;
+}
+
+.containerUp {
+	display: flex;
+	justify-content: space-evenly;
+	margin-bottom: 50px;
+	position: relative;
+}
+
+.containerDown {
+	display: flex;
+	justify-content: space-evenly;
+	position: relative;
+}
+h3 {
+	margin-top: 1rem;
+}
+.member {
+	display: flex;
+	flex-direction: column;
+	width: 270px;
+	height: 270px;
+	border: 3px solid var(--mainColor);
+	border-radius: 20%;
+	text-align: center;
+	align-items: center;
+	background-color: rgb(202, 202, 202);
+	/* box-shadow: 0px 0px 5px 5px var(--forthColor); */
+	box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.75);
+	position: relative;
+}
+
+.member img {
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	margin-top: 30px;
+	flex-direction: column-reverse;
+}
+
+/* icons */
+.icons {
+	display: flex;
+	justify-content: center;
+	padding: 0.8rem 0;
+}
+.icons li {
+	list-style-type: none;
+	background: var(--secondColor);
+	color: #fff;
+	width: 30px;
+	height: 30px;
+	margin: 0 0.5rem;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+}
+.icons li:hover {
+	background: var(--mainColor);
+	color: var(--forthColor);
+}
+
+/* end of main style */
+
+/* footer */
+footer {
+	height: 130px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--secondColor);
+	overflow: hidden;
+	padding: 1.5rem 0;
+	margin-top: 10rem;
+}
+
+.footer-links {
+	list-style: none;
+	width: 10%;
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 1rem;
+}
+
+.footer-links a {
+	font-size: 200%;
+	color: var(--forthColor);
+	transition: var(--mainTransition);
+}
+
+.footer-links a:hover {
+	color: var(--thirdColor);
+}
+
+footer h2 {
+	font-size: 110%;
+	text-transform: capitalize;
+	letter-spacing: 0.2rem;
+	color: var(--forthColor);
+}
+
+/* end of footer */
