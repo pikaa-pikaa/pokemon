@@ -64,9 +64,6 @@
             </div>
         </header>
         <main>
-            <h3 class="name">
-                <%= pokemonDescription.name %>
-            </h3>
             <div class="bigContainer">
                 <div class="lContainer">
                     <div class="imgBox">
@@ -83,55 +80,53 @@
                     </div>
                 </div>
                 <div class="rContainer">
+                    <h3 class="name">
+                        <%= pokemonDescription.name %>
+                    </h3>
                     <div class="description">
-                        <ul>
-                            <li>
-                                <%= pokemonDescription.description %>
-                            </li>
-                        </ul>
+                        <p>
+                            <%= pokemonDescription.description %>
+                        </p>
                     </div>
-                    <div class="att_def_waek">
-                        <div class="firstRow">
-                            <div style="display: flex;">
-
+                    <div class="firstRow">
+                        <div>
+                            <div class="ability">
                                 <img src="/images/describtionStyle/abilit.webp" alt="abilities">
-                                <ul>
-                                    <li>Abilities</li>
-                                    <li class="words">
-                                        <%= pokemonDescription.abilities %>
-                                    </li>
-                                </ul>
+                                <span>Abilities</span>
                             </div>
-                            <div style="display: flex;">
-                                <img src="/images/describtionStyle/attack.png" alt="attack">
+                            <p class="words">
+                                <%= pokemonDescription.abilities %>
+                            </p>
 
-                                <ul>
-                                    <li>Attack</li>
-                                    <li class="words attack">
-                                        <%= pokemonDescription.attack %>
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
-                        <div class=" secRow">
-                            <div style="display: flex;">
-                                <img src="/images/describtionStyle/def.png" alt="Defence">
-                                <ul>
-                                    <li>Defence</li>
-                                    <span class="words">
-                                        <%= pokemonDescription.defence %>
-                                    </span>
-                                </ul>
+                        <div>
+                            <div class="ability">
+                                <img src="/images/describtionStyle/attack.png" alt="attack">
+                                <span>Attack</span>
                             </div>
-                            <div style="display: flex;">
+                            <p class="words attack">
+                                <%= pokemonDescription.attack %>
+                            </p>
+
+                        </div>
+                        <div>
+                            <div class="ability">
+                                <img src="/images/describtionStyle/def.png" alt="Defence" class="Defence">
+                                <span>Defence</span>
+                            </div>
+                            <p class="words">
+                                <%= pokemonDescription.defence %>
+                            </p>
+
+                        </div>
+                        <div>
+                            <div class="ability">
                                 <img src="/images/describtionStyle/weak.png" alt="Weaknesses">
-                                <ul>
-                                    <li>Weaknesses</li>
-                                    <span class="words weak">
-                                        <%= pokemonDescription.weaknesses %>
-                                    </span>
-                                </ul>
+                                <span>Weaknesses</span>
                             </div>
+                            <p class="words weak">
+                                <%= pokemonDescription.weaknesses %>
+                            </p>
                         </div>
                     </div>
                 </div>

@@ -173,6 +173,7 @@ a {
 .menuItems > div:hover {
 	background-color: red;
 }
+
 .menuItems > div:hover a {
 	color: white;
 }
