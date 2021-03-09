@@ -91,9 +91,11 @@
                     </div>
                 </section>
                 <section class="ring">
-                    <form action="/competition/<%=user.user_id  %>" method="POST" class="win">
+                    <form action="/competition/<%=user.user_id  %>" method="POST" class="winLose">
                         <input type="hidden" name="addCard" value="" class="winOrLose">
-                        <input type="submit" value="Go to your dashboard">
+                        <h2 class="winLoseTitle"></h2>
+                        <img src="" alt="" class="winLoseImg">
+                        <input type="submit" value="Go to your dashboard" class="winLoseBtn">
                     </form>
                 </section>
                 <section class="user">

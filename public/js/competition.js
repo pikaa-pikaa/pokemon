@@ -92,16 +92,26 @@ $(function () {
 			}
 
 			let winOrLose = document.querySelector('.winOrLose');
+			let winLose = document.querySelector('.winLose');
+			let winLoseImg = document.querySelector('.winLoseImg');
+			let winLoseTitle = document.querySelector('.winLoseTitle');
 
-			console.log(winOrLose.value);
-
-			if (cardCount === 10) {
+			if (cardCount === 20) {
 				if (remaindComputerPoints > remaindUserPoints) {
 					winOrLose.value = 'lose';
+					winLose.style.opacity = 1;
+					winLoseImg.setAttribute('src', './../images/lose.png');
+					winLoseTitle.textContent = 'YOU LOST';
 				} else if (remaindComputerPoints < remaindUserPoints) {
 					winOrLose.value = 'win';
+					winLose.style.opacity = 1;
+					winLoseImg.setAttribute('src', './../images/win.png');
+					winLoseTitle.textContent = 'YOU WON!!';
 				} else {
 					winOrLose.value = 'draw';
+					winLose.style.opacity = 1;
+					winLoseImg.setAttribute('src', './../images/draw.png');
+					winLoseTitle.textContent = 'DRAW';
 				}
 			}
 		});
