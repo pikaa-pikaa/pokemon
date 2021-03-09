@@ -1,6 +1,7 @@
 $(function () {
 	$('.name').delay(50).fadeTo(1500, 1);
 	$('.desc').delay(1000).fadeTo(2000, 1);
+	$('.login').delay(1500).fadeTo(3000, 1);
 
 	//card slider
 

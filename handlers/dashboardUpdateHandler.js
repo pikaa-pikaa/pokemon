@@ -10,6 +10,8 @@ const dashboardUpdateHandler = async (req, res) => {
 
 		let randomPokemon = generateRandomPokemon(pokemons.rows.length);
 
+		console.log(pokemons.rows.length);
+
 		let sql2 = `SELECT * FROM pokemons
                 INNER JOIN pokemons_users ON pokemons_users.pokemon_id = pokemons.pokemon_id
                 INNER JOIN users ON users.user_id = pokemons_users.user_id
@@ -17,15 +19,15 @@ const dashboardUpdateHandler = async (req, res) => {
 
 		let userPokemons = await client.query(sql2);
 
-		let pokemonExist = userPokemons.rows.find(
-			(userPokemon) => userPokemon.pokemon_id === randomPokemon,
-		);
+		let pokemonExist = userPokemons.rows.find((userPokemon) => {
+			return userPokemon.pokemon_id === randomPokemon;
+		});
 
 		while (pokemonExist) {
 			randomPokemon = generateRandomPokemon(pokemons.rows.length);
-			pokemonExist = userPokemons.rows.find(
-				(userPokemon) => userPokemon.pokemon_id === randomPokemon,
-			);
+			pokemonExist = userPokemons.rows.find((userPokemon) => {
+				return userPokemon.pokemon_id === randomPokemon;
+			});
 		}
 
 		let sqlUpdate = `INSERT INTO pokemons_users (pokemon_id, user_id) VALUES(${randomPokemon}, ${userId}) RETURNING *;`;
