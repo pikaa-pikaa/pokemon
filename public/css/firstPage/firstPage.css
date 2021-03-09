@@ -69,7 +69,7 @@ header {
 
 .login {
 	position: absolute;
-	top: 55%;
+	top: 65%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 20%;
@@ -78,6 +78,7 @@ header {
 	padding: 1rem 1.5rem;
 	border-radius: 1rem;
 	transition: var(--mainTransition);
+	opacity: 0;
 }
 
 .login a {
@@ -115,13 +116,13 @@ header {
 
 .name {
 	margin-bottom: 2rem;
-	font-size: 5rem;
+	font-size: 4rem;
 	transition: var(--mainTransition);
 	opacity: 0;
 }
 
 .desc {
-	font-size: 3rem;
+	font-size: 2rem;
 	transition: var(--mainTransition);
 	opacity: 0;
 }
