@@ -140,17 +140,39 @@ a {
 .lContainer {
 	margin-left: 10px;
 }
+/* .imgBox {
+} */
+.imgBox:before {
+  content: "";
+  position: absolute;
+  /* top: 10px; */
+  left: 20px;
+  width: 100px;
+  height: 522px;
+  top: 88px;
+  /* transform: skewx(-45deg); */
+  background: rgba(255, 255, 255, 0.1);
+  /* background: yellow; */
+  transition: 0.5s;
+  /* border-radius: 50%; */
+  overflow: hidden;
+}
+.imgBox:hover:before {
+  left: 500px;
+}
 .lContainer img {
 	width: 400px;
 	height: 522px;
 	/* width: "hide"; */
 }
+
 .hpContainer {
 	display: flex;
 	margin-top: 44px;
 	margin-left: 12px;
 }
 .hpText {
+
 	font-size: 24px;
 	margin-right: 20px;
 	border: 1px black solid;
@@ -187,15 +209,15 @@ a {
 
 /* Right Container */
 .rContainer {
-	display: flex;
-	flex-direction: column;
-	/* justify-content: space-evenly; */
-	/* justify-items: center; */
-	font-size: large;
-	margin-top: 30px;
-	font-size: 30px;
-	width: 825px;
-	border: 2px solid yellow;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+  /* justify-items: center; */
+  font-size: large;
+  margin-top: 30px;
+  font-size: 30px;
+  width: 825px;
+  /* border: 2px solid yellow; */
 }
 
 /* .rContainer > * {
@@ -235,11 +257,15 @@ a {
 	background-color: var(--thirdColor);
 }
 .att_def_waek {
-	display: flex;
-	flex-direction: column;
-	/* background-color: var(--forthColor); */
-	width: 400px;
-	justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  /* background-color: var(--forthColor); */
+  width: 400px;
+  justify-content: space-between;
+  background-color: rgb(164 255 134);
+  border-radius: 2%;
+  box-shadow: 10px 5px 5px rgb(41, 41, 41);
+  padding-left: 6px;
 }
 
 .att_def_waek img {
