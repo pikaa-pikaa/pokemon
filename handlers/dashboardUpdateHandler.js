@@ -5,12 +5,15 @@ const dashboardUpdateHandler = async (req, res) => {
 	let userId = req.params.userId;
 
 	if (loseOrWin === 'win') {
-		let sql = `SELECT * FROM pokemons;`;
+		let sqlid = `SELECT * FROM pokemons;`;
+		let pokemonsIds = await client.query(sqlid);
+
+		let ids = pokemonsIds.rows.map((id) => id.pokemon_id);
+
+		let randomPokemon = generateRandomPokemon(ids.length);
+
+		let sql = `SELECT * FROM pokemons WHERE pokemon_id=${ids[randomPokemon]};`;
 		let pokemons = await client.query(sql);
-
-		let randomPokemon = generateRandomPokemon(pokemons.rows.length);
-
-		console.log(pokemons.rows.length);
 
 		let sql2 = `SELECT * FROM pokemons
                 INNER JOIN pokemons_users ON pokemons_users.pokemon_id = pokemons.pokemon_id
@@ -19,29 +22,31 @@ const dashboardUpdateHandler = async (req, res) => {
 
 		let userPokemons = await client.query(sql2);
 
-		let pokemonExist = userPokemons.rows.find((userPokemon) => {
-			return userPokemon.pokemon_id === randomPokemon;
+		let pokemonExist = userPokemons.rows.filter((userPokemon) => {
+			return userPokemon.pokemon_id === pokemons.rows[0].pokemon_id;
 		});
 
-		while (pokemonExist) {
-			randomPokemon = generateRandomPokemon(pokemons.rows.length);
-			pokemonExist = userPokemons.rows.find((userPokemon) => {
-				return userPokemon.pokemon_id === randomPokemon;
+		while (pokemonExist.length !== 0) {
+			randomPokemon = generateRandomPokemon(ids.length);
+			let sql = `SELECT * FROM pokemons WHERE pokemon_id=${ids[randomPokemon]};`;
+			let pokemons = await client.query(sql);
+
+			pokemonExist = userPokemons.rows.filter((userPokemon) => {
+				return userPokemon.pokemon_id === pokemons.rows[0].pokemon_id;
 			});
 		}
 
-		let sqlUpdate = `INSERT INTO pokemons_users (pokemon_id, user_id) VALUES(${randomPokemon}, ${userId}) RETURNING *;`;
-
+		let sqlUpdate = `INSERT INTO pokemons_users (pokemon_id, user_id) VALUES(${ids[randomPokemon]}, ${userId}) RETURNING *;`;
 		let updateDashboard = await client.query(sqlUpdate);
-
-		res.redirect(`/dashboard/${userId}`);
 	} else {
 		res.redirect(`/dashboard/${userId}`);
 	}
+
+	res.redirect(`/dashboard/${userId}`);
 };
 
 function generateRandomPokemon(max) {
-	return Math.floor(Math.random() * max + 1);
+	return Math.floor(Math.random() * max);
 }
 
 module.exports = dashboardUpdateHandler;

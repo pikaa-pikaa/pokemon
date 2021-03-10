@@ -77,41 +77,59 @@ $(function () {
 				)[36],
 			);
 
+			let winOrLose = document.querySelector('.winOrLose');
+			let winLose = document.querySelector('.winLose');
+			let winLoseImg = document.querySelector('.winLoseImg');
+			let winLoseTitle = document.querySelector('.winLoseTitle');
+
+			let main = document.querySelector('.main');
+
 			let remaindComputerPoints = Number(
 				computerPoints.textContent.split(' ')[0],
 			);
-
 			let remaindUserPoints = Number(userPoints.textContent.split(' ')[0]);
 
 			if (userHp > computerHp) {
 				computerPoints.textContent = `${
 					remaindComputerPoints - (userHp - computerHp)
 				} points`;
+
+				remaindComputerPoints = Number(
+					computerPoints.textContent.split(' ')[0],
+				);
+				remaindUserPoints = Number(userPoints.textContent.split(' ')[0]);
 			} else {
 				userPoints.textContent = `${
 					remaindUserPoints - (computerHp - userHp)
 				} points`;
+
+				remaindComputerPoints = Number(
+					computerPoints.textContent.split(' ')[0],
+				);
+				remaindUserPoints = Number(userPoints.textContent.split(' ')[0]);
 			}
 
-			let winOrLose = document.querySelector('.winOrLose');
-			let winLose = document.querySelector('.winLose');
-			let winLoseImg = document.querySelector('.winLoseImg');
-			let winLoseTitle = document.querySelector('.winLoseTitle');
-
-			if (cardCount === 20) {
+			if (
+				cardCount === 20 ||
+				remaindComputerPoints <= 0 ||
+				remaindUserPoints <= 0
+			) {
 				if (remaindComputerPoints > remaindUserPoints) {
 					winOrLose.value = 'lose';
 					winLose.style.opacity = 1;
+					main.classList.add('after');
 					winLoseImg.setAttribute('src', './../images/lose.png');
 					winLoseTitle.textContent = 'YOU LOST';
 				} else if (remaindComputerPoints < remaindUserPoints) {
 					winOrLose.value = 'win';
 					winLose.style.opacity = 1;
+					main.classList.add('after');
 					winLoseImg.setAttribute('src', './../images/win.png');
 					winLoseTitle.textContent = 'YOU WON!!';
 				} else {
 					winOrLose.value = 'draw';
 					winLose.style.opacity = 1;
+					main.classList.add('after');
 					winLoseImg.setAttribute('src', './../images/draw.png');
 					winLoseTitle.textContent = 'DRAW';
 				}
@@ -119,17 +137,37 @@ $(function () {
 		});
 	});
 
-	let winLoseBtn = document.querySelector('.winLoseBtn');
+	// let remaindComputerPoints = Number(computerPoints.textContent.split(' ')[0]);
 
-	winLoseBtn.addEventListener('click', () => {
-		if (click) {
-			click = false;
-		} else {
-			winLoseBtn.onclick = function () {
-				return false;
-			};
-		}
-	});
+	// let remaindUserPoints = Number(userPoints.textContent.split(' ')[0]);
+
+	// let winOrLose = document.querySelector('.winOrLose');
+	// let winLose = document.querySelector('.winLose');
+	// let winLoseImg = document.querySelector('.winLoseImg');
+	// let winLoseTitle = document.querySelector('.winLoseTitle');
+
+	// if (
+	// 	cardCount === 20 ||
+	// 	remaindComputerPoints <= 0 ||
+	// 	remaindUserPoints <= 0
+	// ) {
+	// 	if (remaindComputerPoints > remaindUserPoints) {
+	// 		winOrLose.value = 'lose';
+	// 		winLose.style.opacity = 1;
+	// 		winLoseImg.setAttribute('src', './../images/lose.png');
+	// 		winLoseTitle.textContent = 'YOU LOST';
+	// 	} else if (remaindComputerPoints < remaindUserPoints) {
+	// 		winOrLose.value = 'win';
+	// 		winLose.style.opacity = 1;
+	// 		winLoseImg.setAttribute('src', './../images/win.png');
+	// 		winLoseTitle.textContent = 'YOU WON!!';
+	// 	} else {
+	// 		winOrLose.value = 'draw';
+	// 		winLose.style.opacity = 1;
+	// 		winLoseImg.setAttribute('src', './../images/draw.png');
+	// 		winLoseTitle.textContent = 'DRAW';
+	// 	}
+	// }
 
 	//end of card
 });

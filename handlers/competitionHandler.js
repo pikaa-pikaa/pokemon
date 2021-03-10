@@ -4,7 +4,6 @@ const competitionHandler = async (req, res) => {
 	let userId = req.params.userId;
 
 	let userCards;
-	let computerCards;
 
 	let userSql = `SELECT * FROM users WHERE user_id = ${userId};`;
 
